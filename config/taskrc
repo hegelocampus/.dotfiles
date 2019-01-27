@@ -29,7 +29,7 @@ include /usr/share/doc/task/rc/solarized-dark-256.theme
 #include /usr/share/doc/task/rc/solarized-light-256.theme
 #include /usr/share/doc/task/rc/no-color.theme
 
-rc.dateformat=Y-M-DTH:N
+rc.dateformat=Y-M-DTHN
 
 # Inthe.AM online sync configuration
 taskd.certificate=~/.config/intheam/private.certificate.pem
