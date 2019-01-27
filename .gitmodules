@@ -6,4 +6,4 @@
 	url = https://github.com/tpope/vim-pathogen.git
 [submodule "dotbot-autobot"]
 	path = dotbot-autobot
-	url = https://github.com/gwerbin/dotbot-autobot
+	url = https://github.com/gwerbin/dotbot-autobot.git

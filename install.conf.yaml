@@ -1,42 +1,27 @@
 - clean: ['~']
-
+- defaults:
+        link:
+          create: true
 - link:
-    ~/.profile: profile
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
-    ~/.gitconfig: gitconfig
-    ~/.taskrc:
-        path: taskrc
-        create: true 
-    ~/.vimrc: vimrc
-    ~/.zshrc: zshrc
-    ~/.Xmodmap: Xmodmap
-    ~/.Xresources: Xresources
-    ~/.xinitrc: xinitrc
-    ~/.i3:
-        path: i3
-        create: true
-    ~/.config/redshift:
-        path: config/redshift
-        create: true
-    ~/.config/i3status:
-        path: config/i3status
-        create: true
-    ~/.config/intheam:
-        path: config/intheam
-        create: true
-    ~/.config/kitty:
-        path: config/kitty
-        create: true
-    ~/.config/ranger:
-        path: config/ranger
-        create: true
-    ~/.config/rofi:
-        path: config/rofi
-        create: true
-    ~/.vim/bundle:
-        path: vim/bundle
-        create: true
+    ~/.profile:
+    ~/.bash_profile:
+    ~/.bashrc:
+    ~/.bashbee:
+    ~/.bash_logout:
+    ~/.gitconfig:
+    ~/.Xmodmap:
+    ~/.Xresources:
+    ~/.xinitrc:
+    ~/.zshrc: zsh/zshrc
+    ~/.oh-my-zsh/custom/custom-aliases.zsh: zsh/custom-aliases
+    ~/.vimrc:
+        path:  vim/vimrc
+    ~/.taskrc: config/taskrc
+    ~/.i3/config: config/i3
+    ~/.config/redshift.conf: config/redshift
+    ~/.config/i3status/config/i3status.conf: config/i3status
+    ~/.config/kitty/kitty.conf: config/kitty
+    ~/.config/ranger/rc.conf: config/ranger
+    ~/.config/rofi/config: config/rofi
 - shell:
   - [git submodule update --init --recursive, Installing submodules]    
