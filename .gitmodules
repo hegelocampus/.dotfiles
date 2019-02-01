@@ -38,3 +38,23 @@
 	path = vim/bundle/vim-pencil
 	url = https://github.com/reedes/vim-pencil.git
 	ignore = dirty
+[submodule "zsh/oh-my-zsh"]
+	path = zsh/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+	ignore = dirty
+[submodule "zsh/custom/plugins/zsh-autosuggestions"]
+	path = zsh/custom/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+	ignore = dirty
+[submodule "zsh/custom/plugins/zsh-syntax-highlighting"]
+	path = zsh/custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+	ignore = dirty
+[submodule "zsh/custom/themes/geometry"]
+	path = zsh/custom/themes/geometry
+	url = https://github.com/geometry-zsh/geometry.git
+	ignore = dirty
+[submodule "zsh/custom/themes/spaceship-prompt"]
+	path = zsh/custom/themes/spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt.git
+	ignore = dirty

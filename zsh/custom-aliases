@@ -1,3 +1,0 @@
-alias :q=exit
-alias :qw=q
-eval "$(hub alias -s)"
