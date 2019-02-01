@@ -1,8 +1,9 @@
 " Setup for pathogen
-set nocompatible
-execute pathogen#infect()
+source ~/.dotfiles/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect('bundle/{}', '~/.dotfiles/vim/bundle/{}')
 syntax on
 filetype plugin indent on
+set nocompatible
 
 " Set Utf-8 to default
 set encoding=utf-8
