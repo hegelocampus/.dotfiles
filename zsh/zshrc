@@ -64,6 +64,7 @@ ENABLE_CORRECTION="true"
 plugins=(
   gitfast
   git-extras
+  send
   archlinux
   common-aliases
   compleat
@@ -73,7 +74,7 @@ plugins=(
   zsh-autosuggestions
   taskwarrior
   custom-aliases
-  zsh-syntax-highlighting
+  fast-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh

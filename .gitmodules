@@ -58,3 +58,9 @@
 	path = zsh/custom/themes/spaceship-prompt
 	url = https://github.com/denysdovhan/spaceship-prompt.git
 	ignore = dirty
+[submodule "zsh/custom/plugins/fast-syntax-highlighting"]
+	path = zsh/custom/plugins/fast-syntax-highlighting
+	url = https://github.com/zdharma/fast-syntax-highlighting.git
+[submodule "zsh/custom/plugins/send.zsh"]
+	path = zsh/custom/plugins/send.zsh
+	url = https://github.com/robertzk/send.zsh.git
