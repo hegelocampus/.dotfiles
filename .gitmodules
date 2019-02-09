@@ -64,3 +64,9 @@
 [submodule "zsh/custom/plugins/send.zsh"]
 	path = zsh/custom/plugins/send.zsh
 	url = https://github.com/robertzk/send.zsh.git
+[submodule "vim/bundle/vim-notes"]
+	path = vim/bundle/vim-notes
+	url = https://github.com/xolox/vim-notes.git
+[submodule "vim/bundle/vim-misc"]
+	path = vim/bundle/vim-misc
+	url = https://github.com/xolox/vim-misc.git
