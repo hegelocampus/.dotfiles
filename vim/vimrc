@@ -5,12 +5,24 @@ syntax on
 filetype plugin indent on
 set nocompatible
 
+" Setup for vim-notes
+filetype plugin on
+let g:pencil#wrapModeDefault = 'soft'
+
+" Set indent guides as default
+let g:indent_guides_enable_on_vim_startup = 1
+
 " Set Utf-8 to default
 set encoding=utf-8
+
+set linebreak
+set breakindent
 
 " Theme config 
 colorscheme gruvbox
 set background=dark " Setting dark mode
+let g:airline_powerline_fonts = 1 
+let g:airline_theme='distinguished'
 
 " WordProcessor setup
 func! WordProcessor()
@@ -24,5 +36,7 @@ func! WordProcessor()
 	setlocal linebreak 
 	" spelling
 	setlocal spell spelllang=en_us
+	autocmd BufReadPost * call litecorrect#init()
+		          \ | call pencil#init()
 endfu
 com! WP call WordProcessor()

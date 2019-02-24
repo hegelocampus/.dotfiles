@@ -70,3 +70,18 @@
 [submodule "vim/bundle/vim-misc"]
 	path = vim/bundle/vim-misc
 	url = https://github.com/xolox/vim-misc.git
+[submodule "vim/bundle/vim-litecorrect"]
+	path = vim/bundle/vim-litecorrect
+	url = https://github.com/reedes/vim-litecorrect.git
+[submodule "zsh/custom/plugins/alias-tips"]
+	path = zsh/custom/plugins/alias-tips
+	url = https://github.com/djui/alias-tips.git
+[submodule "zsh/custom/themes/astral"]
+	path = zsh/custom/themes/astral
+	url = https://github.com/alphabetum/astral.git
+[submodule "vim/bundle/vim-indent-guides"]
+	path = vim/bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git

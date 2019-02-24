@@ -21,7 +21,7 @@ bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font xft:URWGothic-Book 11
+font xft:Fira Code 11
 
 # Use Mouse+$mod to drag floating windows
 floating_modifier $mod
@@ -268,7 +268,7 @@ mode "resize" {
 }
 
 # Lock screen
-bindsym $mod+9 exec --no-startup-id blurlock
+bindsym $mod+9 exec --no-startup-id betterlockscreen -l blur
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -280,9 +280,10 @@ exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 # exec --no-startup-id blueman-applet
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id start_conky_maia
+exec --no-startup-id conky -c /home/bee/.dotfiles/config/conky_gruvbox
+# exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker blurlock
+exec --no-startup-id xautolock -time 10 -locker  betterlockscreen -l blur
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 # Autostart Geoclue2 for Redshift
