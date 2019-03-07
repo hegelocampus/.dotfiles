@@ -16,13 +16,21 @@ let g:indent_guides_enable_on_vim_startup = 1
 set encoding=utf-8
 
 set linebreak
+set autoindent
 set breakindent
 
 " Theme config 
 colorscheme gruvbox
 set background=dark " Setting dark mode
 let g:airline_powerline_fonts = 1 
-let g:airline_theme='distinguished'
+" let g:airline_theme='distinguished'
+hi Normal 	guibg=none ctermbg=none 
+hi Statement 	guibg=none ctermbg=none 
+hi Title	guibg=none ctermbg=none 
+hi Todo		guibg=none ctermbg=none 
+hi Underlined	guibg=none ctermbg=none 
+hi ErrorMsg	guibg=none ctermbg=none 
+hi LineNr	guibg=none ctermbg=none 
 
 " WordProcessor setup
 func! WordProcessor()

@@ -451,7 +451,7 @@ _astral_return_line() {
 
   # $_full_line
   local _full_line
-  _full_line="${_prefix} ${_spacer} ${_time} •"
+  _full_line="${_prefix}"
   # NOTE: use `_full_line="${_prefix} ${_spacer} ${_time} »"` for top line.
 
   printf "%s\n" "${_full_line}%{${reset_color}%}"

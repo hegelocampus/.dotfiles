@@ -182,9 +182,10 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 
 # Open applications on specific workspaces
 # assign [class="Thunderbird"] $ws1
-assign [class="firefox"] $ws2
+assign [class="libreoffice"] $ws2
 assign [class="Pcmanfm"] $ws3
 # assign [class="Skype"] $ws5
+for_window [class="Spotify"] move to workspace $ws7 
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"] floating enable border pixel 1
@@ -228,15 +229,14 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
-set $mode_system (l)ock, (e)xit, switch_(u)ser, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
+set $mode_system (l)ock, (e)xit, (s)uspend, (h)ibernate, (r)eboot, (Shift+s)hutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
-    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
-    bindsym e exec --no-startup-id i3exit logout, mode "default"
-    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym l exec --no-startup-id betterlockscreen -l blur, mode "default"
+    bindsym s exec --no-startup-id betterlockscreen -s dimblur, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"
 
     # exit system mode: "Enter" or "Escape"
     bindsym Return mode "default"
@@ -283,11 +283,11 @@ exec --no-startup-id clipit
 exec --no-startup-id conky -c /home/bee/.dotfiles/config/conky_gruvbox
 # exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-exec --no-startup-id xautolock -time 10 -locker  betterlockscreen -l blur
+exec --no-startup-id xautolock -time 10 -locker  'betterlockscreen -l dimblur'
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 # Autostart Geoclue2 for Redshift
-exec_always --no-startup-id /user/lib/geoclue-2.0/demos/agent 
+exec_always --no-startup-id /usr/lib/geoclue-2.0/demos/agent 
 # Autostart Redshift
 exec_always --user enable redshift-gtk
 
