@@ -9,16 +9,6 @@ set nocompatible
 filetype plugin on
 let g:pencil#wrapModeDefault = 'soft'
 
-" Set indent guides as default
-let g:indent_guides_enable_on_vim_startup = 1
-
-" Set Utf-8 to default
-set encoding=utf-8
-
-set linebreak
-set autoindent
-set breakindent
-
 " Theme config 
 colorscheme gruvbox
 set background=dark " Setting dark mode
@@ -32,6 +22,18 @@ hi Underlined	guibg=none ctermbg=none
 hi ErrorMsg	guibg=none ctermbg=none 
 hi LineNr	guibg=none ctermbg=none 
 
+" Set indent guides as default
+let g:indent_guides_enable_on_vim_startup = 1
+
+" Set Utf-8 to default
+set encoding=utf-8
+
+set linebreak
+set autoindent
+set breakindent
+set number
+set numberwidth=1 
+
 " WordProcessor setup
 func! WordProcessor()
 	" movement changes
@@ -42,6 +44,7 @@ func! WordProcessor()
 	setlocal noexpandtab
 	setlocal wrap
 	setlocal linebreak 
+	setlocal nonumber
 	" spelling
 	setlocal spell spelllang=en_us
 	autocmd BufReadPost * call litecorrect#init()
