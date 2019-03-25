@@ -1,4 +1,4 @@
-rofi.theme: ~/.config/rofi/themes/gruvbox/gruvbox-dark.rasi
+rofi.theme: ~/.dotfiles/misc/gruvbox-rofi/gruvbox-dark.rasi
 rofi.modi: window,run,drun,ssh,combi
 rofi.combi-modi: window,drun
 rofi.bw: 0

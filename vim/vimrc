@@ -1,6 +1,6 @@
 " Setup for pathogen
-source ~/.dotfiles/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect('bundle/{}', '~/.dotfiles/vim/bundle/{}')
+source /home/bee/.dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect('bundle/{}', '/home/bee/.dotfiles/vim/bundle/{}')
 syntax on
 filetype plugin indent on
 set nocompatible

@@ -8,6 +8,7 @@ userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
+xset -b
 
 DEFAULT_SESSION='i3 --shmlog-size 0'
 
@@ -38,6 +39,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
     unset f
 fi
 
+systemctl --user import-environment DISPLAY
+
 get_session(){
 	local dbus_args=(--sh-syntax --exit-with-session)
 	case $1 in
@@ -49,7 +52,7 @@ get_session(){
 		enlightenment) dbus_args+=(enlightenment_start) ;;
 		fluxbox) dbus_args+=(startfluxbox) ;;
 		gnome) dbus_args+=(gnome-session) ;;
-		i3|i3wm) dbus_args+=(i3 --shmlog-size 0) ;;
+		i3|i3wm) dbus_args+=(i3) ;;
 		jwm) dbus_args+=(jwm) ;;
 		kde) dbus_args+=(startkde) ;;
 		lxde) dbus_args+=(startlxde) ;;
@@ -62,5 +65,12 @@ get_session(){
 
 	echo "dbus-launch ${dbus_args[*]}"
 }
+
+51 twm &
+52 xclock -geometry 50x50-1+1 &
+53 xterm -geometry 80x50+494+51 &
+54 xterm -geometry 80x20+494-0 &
+55 exec xterm -geometry 80x66+0+0 -name login
+lxqt-policykit
 
 exec $(get_session)
