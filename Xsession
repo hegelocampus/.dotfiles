@@ -1,0 +1,3 @@
+## ~/.xsession
+systemctl --user import-environment DISPLAY
+lxqt-policykit-agent

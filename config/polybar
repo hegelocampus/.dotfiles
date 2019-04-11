@@ -17,10 +17,9 @@
 ;==========================================================
 
 [colors]
-background = ${xrdb:color0:#222}
-background-alt = ${xrdb:color8:#444}
-bg-3 =  ${xrdb:color245:#928374}
-foreground = ${xrdb:color7:#dfdfdf}
+color0 = ${xrdb:color0:#222}
+color8 = ${xrdb:color8:#928374}
+color7 = ${xrdb:color7:#dfdfdf}
 foreground-alt = ${xrdb:color15:#555}
 ;Blue
 primary = ${xrdb:color4:#ffb52a}
@@ -29,9 +28,9 @@ secondary = ${xrdb:color6:#e60053}
 ;Green
 tertiary = ${xrdb:color2:#98971a} 
 ;Purple
-quaternary = ${xrdb:color5:#b16286}
+color5 = ${xrdb:color5:#b16286}
 ;Orange
-color5 = ${xrdb:color166:#d65d0e}  
+color16 = ${xrdb:color166:#bd8667}  
 ;Yellow
 color6 = ${xrdb:color172:#d79921}  
 ;Red
@@ -46,11 +45,11 @@ offset-y = 0
 radius = 0.0
 fixed-center = true
 
-background = ${colors.background}
-foreground = ${colors.foreground}
+background = ${colors.color0}
+foreground = ${colors.color7}
 
 line-size = 4
-line-color = ${colors.foreground}
+line-color = ${colors.color7}
 
 border-size = 0
 border-color = #00000000
@@ -62,18 +61,20 @@ module-margin-left = 1
 module-margin-right = 0
 
 font-0 = undefined medium:size=10;0
-font-1 = FuraCode Nerd Font Mono:pixelsize=10:antialias=false;1 
-font-2 = Wuncon Siji:pixelsize=11:antialias=false;0
+font-1 = FuraCode Nerd Font:pixelsize=10:antialias=false;1 
+font-2 = Siji:pixelsize=11:antialias=false;0
 font-3 = undefined medium:bold:size=10;0 
 
 modules-left = i3
 modules-center = xwindow
-modules-right = filesystem xbacklight alsa cpu wlan eth battery date 
+;modules-right = filesystem xbacklight alsa cpu wlan eth battery date 
+modules-right = filesystem xbacklight pulseaudio cpu wlan eth battery date 
 
 tray-position = right
 tray-padding = 1
 tray-detatched = false
 ;tray-background = #0063ff
+tray-underline = ${colors.color8}
 
 ;wm-restack = bspwm
 wm-restack = i3
@@ -109,7 +110,7 @@ type = internal/bspwm
 
 label-focused = %index%
 label-focused-foreground = ${colors.primary}
-label-focused-background = ${colors.background}
+label-focused-background = ${colors.color0}
 label-focused-underline =  ${colors.tertiary}
 label-focused-padding = 2
 
@@ -143,12 +144,12 @@ label-mode-background = ${colors.primary}
 ; focused = Active workspace on focused monitor
 label-focused = %index%
 label-focused-background = ${module/bspwm.label-focused-background}
-label-focused-underline = ${colors.primary}
+label-focused-underline = ${colors.color16}
 label-focused-padding = ${module/bspwm.label-focused-padding}
 
 ; unfocused = Inactive workspace on any monitor
 label-unfocused = %index%
-label-unfocused-underline = ${colors.bg-3}
+label-unfocused-underline = ${colors.color8}
 label-unfocused-padding = ${module/bspwm.label-occupied-padding}
 
 ; visible = Active workspace on unfocused monitor
@@ -165,8 +166,8 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 ; Separator in between workspaces
 label-separator = |
 ;label-separator-padding = 1
-label-separator-foreground = ${colors.bg-3} 
-label-separator-underline = ${colors.bg-3}
+label-separator-foreground = ${colors.color8} 
+label-separator-underline = ${colors.color8}
 
 
 [module/mpd]
@@ -184,11 +185,12 @@ label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
-output = eDP-1 
+output = eDP1 
 
 
 format = <label> <bar>
 label = BL
+format-label-font= 1
 
 bar-width = 10
 bar-indicator = |
@@ -209,7 +211,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.secondary}
 label = %percentage:2%%
@@ -217,7 +219,7 @@ label = %percentage:2%%
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.color6}
 label = %percentage_used%%
@@ -228,7 +230,7 @@ interface = wlp1s0
 interval = 3.0
 
 format-connected = %{T3}<ramp-signal> %{T-}<label-connected>
-format-connected-underline = ${colors.quaternary}
+format-connected-underline = ${colors.color5}
 label-connected = %essid:0:13:...%
 
 format-disconnected =
@@ -248,7 +250,7 @@ type = internal/network
 interface = net0
 interval = 3.0
 
-format-connected-underline = ${colors.quaternary}
+format-connected-underline = ${colors.color5}
 format-connected-prefix = ""
 format-connected-prefix-foreground = ${colors.foreground-alt}
 label-connected = %local_ip%
@@ -263,15 +265,15 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = "%m-%d "
-date-alt = "%Y-%m-%d | "
+date = " %a %m-%d |"
+date-alt = " %A %Y-%m-%d | "
 
 time = "%l:%M "
 time-alt = "%r "
 
 format-prefix =
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${colors.background-alt}
+format-underline = ${colors.color8}
 
 label = %date%%{F#ebdbb2}%time%
 
@@ -280,7 +282,7 @@ type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
-label-volume-foreground = ${root.foreground}
+label-volume-foreground = ${colors.color8}
 
 ;format-muted-prefix = %{T3}" " 
 format-muted-foreground = ${colors.foreground-alt}
@@ -296,11 +298,53 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 1
+bar-volume-indicator-font = 2
 bar-volume-fill = ─
-bar-volume-fill-font = 1
+bar-volume-fill-font = 2
 bar-volume-empty = ─
-bar-volume-empty-font = 1
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+;sink = alsa_output.pci-0000_12_00.3.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = false
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+format-volume = <label-volume> <bar-volume>
+label-volume = VOL
+label-volume-foreground = ${colors.color8}
+
+format-muted-prefix = %{T3}  
+format-muted-prefix-foreground = ${colors.foreground-alt}
+format-muted-foreground = ${colors.color8}
+;label-muted = %{T3} %{T-}sound muted
+label-muted = %{T-} sound muted
+
+bar-volume-width = 10
+bar-volume-foreground-0 = ${colors.primary}
+bar-volume-foreground-1 = ${colors.primary} 
+bar-volume-foreground-2 = ${colors.secondary}
+bar-volume-foreground-3 = ${colors.secondary}
+bar-volume-foreground-4 = ${colors.secondary}
+bar-volume-foreground-5 = ${colors.color6}
+bar-volume-foreground-6 = ${colors.alert}
+bar-volume-gradient = false
+bar-volume-indicator = |
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/battery]
@@ -312,16 +356,16 @@ full-at = 98
 format-charging = %{T3}<animation-charging>%{T-} <label-charging>
 format-charging-underline = ${colors.tertiary}
 
-format-discharging = %{T3}<animation-discharging> %{T-} <label-discharging>
-format-discharging-underline = ${colors.color5}
+format-discharging = %{T3}<animation-discharging>%{T-} <label-discharging>
+format-discharging-underline = ${colors.color16}
 
-format-full-prefix = " "
+format-full-prefix = ""
 format-full-prefix-foreground = ${colors.foreground-alt}
 format-full-underline = ${self.format-charging-underline}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = 

@@ -1,13 +1,13 @@
 conky.config = {
 	alignment = 'top_right',
 	background = true,
-	color2 = '458588',
+	color2 = 'bd8667',
 	cpu_avg_samples = 2,
-	default_color = 'ebdbb2',
+	default_color = 'b0b9c2',
 	double_buffer = true,
-	font = 'Fira Code:size=8',
-	gap_x = 25,
-	gap_y = 13,
+	font = 'undefined medium:size=9',
+	gap_x = 15,
+	gap_y = 20,
 	minimum_width = 200,
 	no_buffers = true,
 	own_window = true,
@@ -17,10 +17,9 @@ conky.config = {
 	use_xft = true,
 }
 conky.text = [[
-${voffset 8}$color2${font Fira Code:size=16}${time %A}$font\
-${voffset -8}$alignr$color${font Fira Code:size=38}${time %e}$font
-$color${voffset -30}$color${font Fira Code:size=18}${time %b}$font\
-${voffset -3} $color${font Fira Code:size=20}${time %Y}$font$color2$hr
+${voffset 25}$color2${font undefined:size=15}${time %A}$font\
+$color${voffset -30}$color${font undefined:size=15}${time %b%Y}$font\
+${voffset 20} $font$color$hr
 #
 ${voffset 20}${goto 40}${color}CPU${font Fira Code:bold:size=8}$alignr$cpu%
 ${voffset 5}${goto 40}$font$color2${top name 1}$alignr$color${top cpu 1}%
