@@ -10,6 +10,6 @@ alias gstat='git status'
 alias vim=nvim
 alias vi=nvim
 alias ou='ls -A'
-
+alias pacup='sudo pacman -Syyu'
 eval "$(hub alias -s)"
 

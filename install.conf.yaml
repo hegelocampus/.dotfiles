@@ -12,8 +12,8 @@
     ~/.Xmodmap:
     ~/.Xresources:
     ~/.xinitrc:
+    ~/.Xsession:
     ~/.zshrc: zsh/zshrc
-    ~/.oh-my-zsh/custom/custom-aliases.zsh: zsh/custom-aliases
     ~/.vimrc:
         path:  vim/vimrc
     ~/.taskrc: config/taskrc
@@ -23,5 +23,7 @@
     ~/.config/kitty/kitty.conf: config/kitty
     ~/.config/ranger/rc.conf: config/ranger
     ~/.config/rofi/config: config/rofi
+    ~/.config/compton.conf: config/compton-blur
+    ~/.config/dunst/dunstrc: config/dunstrc
 - shell:
   - [git submodule update --init --recursive, Installing submodules]    

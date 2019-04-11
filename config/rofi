@@ -1,2 +1,6 @@
-rofi.theme: ~/.config/rofi/themes/gruvbox/gruvbox-dark.rasi
-rofi.modi: window,run,drun,ssh
+rofi.theme: ~/.cache/wal/colors-rofi-dark.rasi
+rofi.modi: window,run,drun,ssh,combi
+rofi.combi-modi: window,drun
+rofi.bw: 0
+rofi.:width: 20
+rofi.font: undefined 10
