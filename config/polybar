@@ -266,7 +266,7 @@ type = internal/date
 interval = 1
 
 date = " %a %m-%d |"
-date-alt = " %A %Y-%m-%d | "
+date-alt = " %A %b %d, %Y | "
 
 time = "%l:%M "
 time-alt = "%r "
@@ -353,7 +353,7 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = %{T3}<animation-charging>%{T-} <label-charging>
+format-charging = %{T3} %{T-} <label-charging>
 format-charging-underline = ${colors.tertiary}
 
 format-discharging = %{T3}<animation-discharging>%{T-} <label-discharging>
