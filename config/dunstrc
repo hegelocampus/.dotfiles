@@ -144,7 +144,7 @@
     # Print a notification on startup.
     # This is mainly for error detection, since dbus (re-)starts dunst
     # automatically after a crash.
-    startup_notification = false
+    startup_notification = true
     
     # dmenu path.
     dmenu = /usr/bin/dmenu -p dunst:
@@ -231,11 +231,11 @@ timeout = 8
 #    summary = "*script*"
 #    script = dunst_test.sh
 
-[ignore-all]
+#[ignore-all]
     # This notification will not be displayed
-    summary = "*"
-    format = ""
-    # script = "path/to/your/script/here.sh"
+#summary = "*"
+#format = ""
+# script = "path/to/your/script/here.sh"
 
 #[signed_on]
 #    appname = Pidgin
