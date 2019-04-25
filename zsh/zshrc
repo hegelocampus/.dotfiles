@@ -95,6 +95,9 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+export EDITOR=nvim
+export VISUAL=nvim
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -109,10 +112,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-if test -z "${XDG_RUNTIME_DIR}"; then
-	export XDG_RUNTIME_DIR=/tmp/${UID}-runtime-dir
-	if ! test -d "${XDG_RUNTIME_DIR}"; then 
-		mkdir "${XDG_RUNTIME_DIR}"
-		chmod 0700 "${XDG_RUNTIME_DIR}"
-	fi
-fi
+
+# Import colorscheme from 'wal' asynchronously
+# &   # Run the process in the background.
+# ( ) # Hide shell job control messages.
+(cat /home/bee/.cache/wal/sequences &)
+
+# To add support for TTYs this line can be optionally added.
+#source /home/bee/.cache/wal/colors-tty.sh

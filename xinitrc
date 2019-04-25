@@ -10,7 +10,7 @@ sysresources=/etc/X11/xinit/.Xresources
 sysmodmap=/etc/X11/xinit/.Xmodmap
 xset -b
 
-DEFAULT_SESSION='i3 --shmlog-size 0'
+DEFAULT_SESSION='i3 --shmlog-size=26214400'
 
 # merge in defaults and keymaps
 
@@ -42,7 +42,6 @@ fi
 systemctl --user import-environment DISPLAY
 
 get_session(){
-	local dbus_args=(--sh-syntax --exit-with-session)
 	case $1 in
 		awesome) dbus_args+=(awesome) ;;
 		bspwm) dbus_args+=(bspwm-session) ;;
@@ -66,11 +65,11 @@ get_session(){
 	echo "dbus-launch ${dbus_args[*]}"
 }
 
-51 twm &
-52 xclock -geometry 50x50-1+1 &
-53 xterm -geometry 80x50+494+51 &
-54 xterm -geometry 80x20+494-0 &
-55 exec xterm -geometry 80x66+0+0 -name login
-lxqt-policykit
+twm &
+xclock -geometry 50x50-1+1 &
+xterm -geometry 80x50+494+51 &
+xterm -geometry 80x20+494-0 &
+exec xterm -geometry 80x66+0+0 -name login
+lxqt-policykit-agent
 
 exec $(get_session)

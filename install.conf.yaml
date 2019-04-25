@@ -12,6 +12,7 @@
     ~/.Xmodmap:
     ~/.Xresources:
     ~/.xinitrc:
+    ~/.Xsession:
     ~/.zshrc: zsh/zshrc
     ~/.vimrc:
         path:  vim/vimrc
