@@ -90,3 +90,6 @@
 [submodule "misc/gruvbox-rofi"]
 	path = misc/gruvbox-rofi
 	url = https://github.com/bardisty/gruvbox-rofi
+[submodule "vim/bundle/wal.vim"]
+	path = vim/bundle/wal.vim
+	url = https://github.com/dylanaraps/wal.vim
