@@ -246,24 +246,21 @@ bindsym $mod+9 exec --no-startup-id betterlockscreen -l blur
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --backend glx --blur-method kawase --blur-strength 6 --blur-background
 exec --no-startup-id dunst
+exec_always --no-startup-id $HOME/.dotfiles/polybar.sh
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id pamac-tray
 exec --no-startup-id clipit
 exec --no-startup-id pa-applet --disable-notifications
-# exec --no-startup-id blueman-applet
-# exec_always --no-startup-id sbxkb
 exec --no-startup-id conky -c /home/bee/.dotfiles/config/conky_gruvbox
-# exec --no-startup-id start_conky_maia
-# exec --no-startup-id start_conky_green
 exec --no-startup-id xautolock -time 10 -locker  'betterlockscreen -l dimblur'
-exec_always --no-startup-id $HOME/.dotfiles/polybar.sh
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 # Autostart Geoclue2 for Redshift
 exec_always --no-startup-id /usr/lib/geoclue-2.0/demos/agent 
 # Autostart Redshift
 exec --no-startup-id redshift
+# Fix for polybar colors
+exec --no-startup-id cat /home/bee/.cache/wal/sequences &
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:

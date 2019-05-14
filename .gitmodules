@@ -93,3 +93,6 @@
 [submodule "vim/bundle/wal.vim"]
 	path = vim/bundle/wal.vim
 	url = https://github.com/dylanaraps/wal.vim
+[submodule "zsh/custom/plugins/send"]
+	path = zsh/custom/plugins/send
+	url = https://github.com/robertzk/send.zsh

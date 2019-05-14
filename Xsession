@@ -1,9 +1,7 @@
 ## ~/.xsession
 # Enforce correct locales from the beginning:
 # LC_ALL is unset since it overwrites everything
-# LANG=de_DE.UTF-8 is used, except for:
 # LC_MESSAGES=C never translates program output
-# LC_TIME=en_DK leads to yyyy-mm-dd hh:mm date/time output
 unset LC_ALL
 export LANG=en_US.UTF-8
 export LC_MESSAGES=C
@@ -17,3 +15,4 @@ lxqt-policykit-agent
 MOZ_USE_XINPUT2=1
 dunst
 xset -b
+(cat /home/bee/.cache/wal/sequences &)

@@ -37,7 +37,9 @@ set numberwidth=1
 " WordProcessor setup
 func! WordProcessor()
 	" movement changes
+	map <Down> gj
 	map j gj
+	map <Up> gk
 	map k gk
 	" formatting text
 	setlocal formatoptions=1
