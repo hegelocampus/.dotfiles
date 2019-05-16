@@ -259,8 +259,6 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id /usr/lib/geoclue-2.0/demos/agent 
 # Autostart Redshift
 exec --no-startup-id redshift
-# Fix for polybar colors
-exec --no-startup-id cat /home/bee/.cache/wal/sequences &
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:

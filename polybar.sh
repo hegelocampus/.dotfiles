@@ -11,5 +11,8 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 # Launch Polybar, using default config location ~/.config/polybar/config
 polybar --config=/home/bee/.dotfiles/config/polybar mybar &
 
+# Set color scheme using wal
+cat /home/bee/.cache/wal/sequences
+
 echo "Polybar launched..."
 
