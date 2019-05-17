@@ -96,3 +96,15 @@
 [submodule "zsh/custom/plugins/send"]
 	path = zsh/custom/plugins/send
 	url = https://github.com/robertzk/send.zsh
+[submodule "vim/bundle/indentpython.vim"]
+	path = vim/bundle/indentpython.vim
+	url = https://github.com/vim-scripts/indentpython.vim
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe
+[submodule "vim/bundle/vim-flake8"]
+	path = vim/bundle/vim-flake8
+	url = https://github.com/nvie/vim-flake8
+[submodule "vim/bundle/syntastic"]
+	path = vim/bundle/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git

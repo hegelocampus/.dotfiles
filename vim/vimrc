@@ -25,6 +25,9 @@ hi LineNr	guibg=none ctermbg=none
 " Set indent guides as default
 let g:indent_guides_enable_on_vim_startup = 1
 
+" Show flake8 in gutter
+let g:flake8_show_in_gutter=1 
+
 " Set Utf-8 to default
 set encoding=utf-8
 
@@ -53,3 +56,23 @@ func! WordProcessor()
 		          \ | call pencil#init()
 endfu
 com! WP call WordProcessor()
+
+" Settings for Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+au BufNewFile,BufRead *.py
+    \ set tabstop=4
+    \ set softtabstop=4
+    \ set shiftwidth=4
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
+    \ autocmd BufWritePost *.py call flake8#Flake8()
