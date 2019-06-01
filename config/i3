@@ -30,6 +30,7 @@ font xft:undefined medium 11
 floating_modifier $mod
 
 # start a terminal
+#bindsym $mod+Return exec xterm
 bindsym $mod+Return exec kitty
 
 # kill focused window
@@ -58,7 +59,6 @@ bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart du
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+99 --release exec --no-startup-id scrot '%Y-%m-%d_screenshot.png' -e 'mv $f /home/bee/Pictures/'
 bindsym $mod+Shift+99 --release exec --no-startup-id scrot -u /home/bee/Pictures/%Y-%m-%d_screenshot
-bindsym $mod+Shift+h exec xdg-open /usr/share/doc/manjaro/i3_help.pdf
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 # focus_follows_mouse no
@@ -256,7 +256,7 @@ exec --no-startup-id xautolock -time 10 -locker  'betterlockscreen -l dimblur'
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 # Autostart Geoclue2 for Redshift
-exec_always --no-startup-id /usr/lib/geoclue-2.0/demos/agent 
+exec_always --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 # Autostart Redshift
 exec --no-startup-id redshift
 
@@ -266,7 +266,7 @@ exec --no-startup-id redshift
 # Change the variable name at the place you want to match the color
 # of your terminal like this:
 # [example]
-# If you want your bar to have the same background color as your 
+# If you want your bar to have the same background color as your
 # terminal background change the line 362 from:
 # background #14191D
 # to:
@@ -330,9 +330,9 @@ set_from_resource $term_color15    color15
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
   client.unfocused        #2F3D44 #2F3D44 #1ABC9C #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+  client.placeholder      #000000 #0c0c0c #ffffff #000000
 
-  client.background       $term_background 
+  client.background       $term_background
 
 #############################
 ### settings for i3-gaps: ###
