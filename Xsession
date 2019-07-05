@@ -15,4 +15,5 @@ lxqt-policykit-agent
 MOZ_USE_XINPUT2=1
 dunst
 xset -b
+xset m 3/2 0
 (cat /home/bee/.cache/wal/sequences &)
