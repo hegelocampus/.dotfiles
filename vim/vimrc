@@ -1,16 +1,22 @@
 " Setup for pathogen
 source /home/bee/.dotfiles/vim/bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect('bundle/{}', '/home/bee/.dotfiles/vim/bundle/{}')
+
 syntax on
 filetype plugin indent on
 set nocompatible
+
+" Map lead key to space
+nnoremap <SPACE> <Nop>
+map <Space> <Leader>
+set showcmd
 
 " Setup for vim-notes
 filetype plugin on
 let g:pencil#wrapModeDefault = 'soft'
 
 " Theme config 
-colorscheme wal
+colorscheme gruvbox
 set background=dark " Setting dark mode
 let g:airline_powerline_fonts = 1 
 " let g:airline_theme='distinguished'
@@ -39,6 +45,7 @@ set numberwidth=1
 
 " WordProcessor setup
 func! WordProcessor()
+	colorscheme wal
 	" movement changes
 	map <Down> gj
 	map j gj
@@ -66,13 +73,22 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let python_highlight_all=1
+
+setlocal tabstop=4
+setlocal softtabstop=0
+setlocal shiftwidth=2
+setlocal textwidth=79
+setlocal expandtab
+setlocal autoindent
+setlocal fileformat=unix
 
 au BufNewFile,BufRead *.py
-    \ set tabstop=4
-    \ set softtabstop=4
-    \ set shiftwidth=4
-    \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+    \ setlocal tabstop=4
+    \ setlocal softtabstop=4
+    \ setlocal shiftwidth=4
+    \ setlocal textwidth=79
+    \ setlocal expandtab
+    \ setlocal autoindent
+    \ setlocal fileformat=unix
     \ autocmd BufWritePost *.py call flake8#Flake8()

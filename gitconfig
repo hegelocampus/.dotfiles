@@ -1,5 +1,7 @@
 [user]
 	email = pizzaman8099@gmail.com
-	name = hegelocampus
+	name = Bee
 [core]
 	excludesfile = ~/.cvsignore
+[color]
+	ui = true
