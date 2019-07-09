@@ -15,4 +15,5 @@ alias cfound='cd ~/appaccademy/foundations'
 alias azp='zip -r ben_ellis_${PWD##*/} *'
 alias rubin='bundle install'
 alias rtest='bundle exec rspec'
+alias specdir='spdir.rb'
 eval "$(hub alias -s)"
