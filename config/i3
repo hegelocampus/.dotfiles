@@ -8,7 +8,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-new_window none
+new_window pixel
 new_float normal
 
 # Hide borders
@@ -25,8 +25,7 @@ font xft:undefined medium 11
 floating_modifier $mod
 
 # start a terminal
-#bindsym $mod+Return exec xterm
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec --no-startup-id xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -36,8 +35,8 @@ bindsym $mod+d exec --no-startup-id rofi -show combi
 
 ## sound-section
 ################################################################################################
-exec --no-startup-id start-pulseaudio-x11 
-exec --no-startup-id pulseaudio 
+exec --no-startup-id start-pulseaudio-x11
+exec --no-startup-id pulseaudio
 bindsym $mod+Ctrl+m exec pavucontrol
 ################################################################################################
 
@@ -49,7 +48,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 bindsym $mod+F2 exec firefox
 bindsym $mod+F3 exec ranger
 bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b --backend glx --blur-method kawase --blur-strength 6 --blur-background
+bindsym $mod+Ctrl+t exec --no-startup-id compton -b --blur-background #--backend glx --blur-method kawase --blur-strength 6
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+99 --release exec --no-startup-id scrot '%Y-%m-%d_screenshot.png' -e 'mv $f /home/bee/Pictures/'
@@ -282,7 +281,7 @@ bindsym $mod+n mode "restore"
 bindsym $mod+9 exec --no-startup-id betterlockscreen -l blur
 
 # Autostart applications
-exec --no-startup-id nitrogen --restore; sleep 1; compton -b --backend glx --blur-method kawase --blur-strength 6 --blur-background
+exec --no-startup-id nitrogen --restore; sleep 1; compton -b --blur-background # --backend glx --blur-method kawase --blur-strength 6
 exec --no-startup-id dunst
 exec_always --no-startup-id $HOME/.dotfiles/polybar.sh
 exec --no-startup-id nm-applet
@@ -328,39 +327,6 @@ set_from_resource $term_color12    color12
 set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
-
-## Start i3bar to display a workspace bar (plus the system information i3status if available)
-#bar {
-#	i3bar_command i3bar
-#	status_command i3status -c ~/.config/i3status/config/i3status.conf
-#	position top
-## Obey Fitts's law
-#tray_padding 0
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
-#	bindsym button4 nop
-#	bindsym button5 nop
-##   font xft:URWGothic-Book 11
-#	strip_workspace_numbers yes
-
-#    colors {
-#        background $term_background #282828
-#        statusline $term_foreground #ebdbb2
-#        separator  #454947
-
-#                          border        backgr.          text
-#        focused_workspace  $term_color15 $term_color4     $term_foreground
-#        active_workspace   $term_color7  $term_background $term_foreground
-#        inactive_workspace #595B5B       $term_background $term_foreground
-#        binding_mode       #16a085       #2C2C2C          #F9FAF9
-#        urgent_workspace   #16a085       #FDF6E3          #E5201D
-#    }
-#}
-
-# hide/unhide i3status bar
-# bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
