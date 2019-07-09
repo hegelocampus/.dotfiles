@@ -121,4 +121,5 @@ export VISUAL=nvim
 
 # To add support for TTYs this line can be optionally added.
 #source /home/bee/.cache/wal/colors-tty.sh
-#eval '$(rbenv init -)'
+
+eval "$(rbenv init -)"

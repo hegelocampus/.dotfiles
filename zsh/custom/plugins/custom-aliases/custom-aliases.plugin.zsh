@@ -10,6 +10,9 @@ alias gstat='git status'
 alias vim=nvim
 alias vi=nvim
 alias ou='ls -A'
-alias pacup='sudo pacman -Syyu'
+alias upp='sudo pacman -Syyu'
+alias cfound='cd ~/appaccademy/foundations'
+alias azp='zip -r ben_ellis_${PWD##*/} *'
+alias rubin='bundle install'
+alias rtest='bundle exec rspec'
 eval "$(hub alias -s)"
-
