@@ -5,6 +5,7 @@ execute pathogen#infect('bundle/{}', '/home/bee/.dotfiles/vim/bundle/{}')
 syntax on
 filetype plugin indent on
 set nocompatible
+set hidden
 
 " Map lead key to space
 nnoremap <SPACE> <Nop>
@@ -44,6 +45,13 @@ set autoindent
 set breakindent
 set number
 set numberwidth=1 
+set tabstop=4
+set softtabstop=0
+set shiftwidth=2
+set textwidth=79
+set expandtab
+set autoindent
+set fileformat=unix
 
 " WordProcessor setup
 func! WordProcessor()
@@ -77,13 +85,6 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let python_highlight_all=1
 
-setlocal tabstop=4
-setlocal softtabstop=0
-setlocal shiftwidth=2
-setlocal textwidth=79
-setlocal expandtab
-setlocal autoindent
-setlocal fileformat=unix
 
 au BufNewFile,BufRead *.py
     \ setlocal tabstop=4
