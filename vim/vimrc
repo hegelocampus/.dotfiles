@@ -11,6 +11,8 @@ nnoremap <SPACE> <Nop>
 map <Space> <Leader>
 set showcmd
 
+set clipboard=unnamedplus
+
 " Setup for vim-notes
 filetype plugin on
 let g:pencil#wrapModeDefault = 'soft'
@@ -45,22 +47,22 @@ set numberwidth=1
 
 " WordProcessor setup
 func! WordProcessor()
-	colorscheme wal
-	" movement changes
-	map <Down> gj
-	map j gj
-	map <Up> gk
-	map k gk
-	" formatting text
-	setlocal formatoptions=1
-	setlocal noexpandtab
-	setlocal wrap
-	setlocal linebreak 
-	setlocal nonumber
-	" spelling
-	setlocal spell spelllang=en_us
-	autocmd BufReadPost * call litecorrect#init()
-		          \ | call pencil#init()
+    colorscheme wal
+    " movement changes
+    map <Down> gj
+    map j gj
+    map <Up> gk
+    map k gk
+    " formatting text
+    setlocal formatoptions=1
+    setlocal noexpandtab
+    setlocal wrap
+    setlocal linebreak 
+    setlocal nonumber
+    " spelling
+    setlocal spell spelllang=en_us
+    autocmd BufReadPost * call litecorrect#init()
+                      \ | call pencil#init()
 endfu
 com! WP call WordProcessor()
 

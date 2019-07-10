@@ -25,7 +25,7 @@ font xft:undefined medium 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id xterm
+bindsym $mod+Return exec --no-startup-id termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -36,7 +36,7 @@ bindsym $mod+d exec --no-startup-id rofi -show combi
 ## sound-section
 ################################################################################################
 exec --no-startup-id start-pulseaudio-x11
-exec --no-startup-id pulseaudio
+exec --no-startup-id pulseaudio -D
 bindsym $mod+Ctrl+m exec pavucontrol
 ################################################################################################
 
@@ -54,6 +54,7 @@ bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+99 --release exec --no-startup-id scrot '%Y-%m-%d_screenshot.png' -e 'mv $f /home/bee/Pictures/'
 bindsym $mod+Shift+99 --release exec --no-startup-id scrot -u /home/bee/Pictures/%Y-%m-%d_screenshot
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+bindsym $mod+Shift+p exec CM_LAUNCHER=rofi clipmenu
 
 # focus_follows_mouse no
 
@@ -282,6 +283,7 @@ bindsym $mod+9 exec --no-startup-id betterlockscreen -l blur
 
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --blur-background # --backend glx --blur-method kawase --blur-strength 6
+exec --no-startup-id clipmenud
 exec --no-startup-id dunst
 exec_always --no-startup-id $HOME/.dotfiles/polybar.sh
 exec --no-startup-id nm-applet

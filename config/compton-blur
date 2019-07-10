@@ -96,6 +96,7 @@ opacity-rule = [
 #"99:name *?= 'Event'", 
 "99:class_g = 'Firefox'", 
 "99:class_g = 'GIMP'", 
+"99:class_g = 'Code'", 
 "99:class_g = 'PlayOnLinux'", 
 "99:class_g = 'Zoom'",
 "99:name *?= 'Zoom'",
