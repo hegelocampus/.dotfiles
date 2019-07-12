@@ -25,7 +25,7 @@ font xft:undefined medium 11
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id termite
+bindsym $mod+Return exec --no-startup-id kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -35,8 +35,8 @@ bindsym $mod+d exec --no-startup-id rofi -show combi
 
 ## sound-section
 ################################################################################################
-exec --no-startup-id start-pulseaudio-x11
-exec --no-startup-id pulseaudio -D
+#exec --no-startup-id start-pulseaudio-x11
+#exec --no-startup-id pulseaudio -D
 bindsym $mod+Ctrl+m exec pavucontrol
 ################################################################################################
 
@@ -285,7 +285,7 @@ bindsym $mod+9 exec --no-startup-id betterlockscreen -l blur
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --blur-background # --backend glx --blur-method kawase --blur-strength 6
 exec --no-startup-id clipmenud
 exec --no-startup-id dunst
-exec_always --no-startup-id $HOME/.dotfiles/polybar.sh
+exec_always --no-startup-id $HOME/.dotfiles/polybar.sh; sleep 1; wal --theme $HOME/.dotfiles/colors.json # This will start polybar and then set the colorscheme for the entire desktop environment
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit

@@ -53,6 +53,9 @@ set expandtab
 set autoindent
 set fileformat=unix
 
+" Rainbow parentheses settup
+let g:rainbow_active = 1
+
 " WordProcessor setup
 func! WordProcessor()
     colorscheme wal

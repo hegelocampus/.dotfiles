@@ -16,4 +16,5 @@ alias azp='zip -r ben_ellis_${PWD##*/} *'
 alias rubin='bundle install'
 alias rtest='bundle exec rspec'
 alias specdir='spdir.rb'
+alias 'sudo rm -rf /'='sudo rm -r /'
 eval "$(hub alias -s)"

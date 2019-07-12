@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/home/bee/Pictures/Big-Sur/Big Sur/wwaves.jpg",
+
+    "special": {
+        "background": "#1b1d20",
+        "foreground": "#b0b9c2",
+        "cursor": "#b0b9c2"
+    },
+    "colors": {
+        "color0": "#1b1d20",
+        "color1": "#bd8667",
+        "color2": "#6B6E76",
+        "color3": "#8C7B74",
+        "color4": "#A48676",
+        "color5": "#617286",
+        "color6": "#817F81",
+        "color7": "#b0b9c2",
+        "color8": "#7b8187",
+        "color9": "#b77b59",
+        "color10": "#6B6E76",
+        "color11": "#8C7B74",
+        "color12": "#A48676",
+        "color13": "#6A7787",
+        "color14": "#817F81",
+        "color15": "#b0b9c2"
+    }
+}
