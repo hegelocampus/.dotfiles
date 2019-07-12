@@ -61,14 +61,14 @@ module-margin-left = 1
 module-margin-right = 0
 
 font-0 = undefined medium:size=10;0
-font-1 = Fura Code Regular Nerd Font:pixelsize=10:antialias=false;1 
+font-1 = FuraCode Regular Nerd Font:pixelsize=10:antialias=false;1 
 font-2 = Siji:pixelsize=11:antialias=false;0
 font-3 = undefined medium:bold:size=10;0 
 
 modules-left = i3
 modules-center = xwindow
 ;modules-right = filesystem xbacklight alsa cpu wlan eth battery date 
-modules-right = filesystem xbacklight pulseaudio cpu wlan eth battery date 
+modules-right = filesystem xbacklight pulseaudio cpu memory wlan eth battery date 
 
 tray-position = right
 tray-padding = 1
@@ -280,8 +280,8 @@ label = %date%%{F#ebdbb2}%time%
 [module/alsa]
 type = internal/alsa
 
-format-volume = %{T3}<label-volume>%{T-}<bar-volume>
-label-volume =  
+format-volume = %{T3} %{T-}<bar-volume>
+label-volume ="" 
 label-volume-foreground = ${colors.foreground-alt}
 
 ;format-muted-prefix = %{T3}" " 
@@ -321,11 +321,11 @@ use-ui-max = false
 interval = 5
 
 format-volume = <label-volume> <bar-volume>
-label-volume = 🔊
+label-volume = 
 label-volume-foreground = ${colors.color8}
 
 format-muted-prefix = %{T3}  
-format-muted-prefix-foreground = ${colors.foreground-alt}
+format-muted-prefix-foreground = ${colors.color8}
 format-muted-foreground = ${colors.color8}
 ;label-muted = %{T3} %{T-}sound muted
 label-muted = %{T-} sound muted

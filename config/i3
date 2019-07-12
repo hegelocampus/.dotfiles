@@ -289,7 +289,7 @@ exec_always --no-startup-id $HOME/.dotfiles/polybar.sh; sleep 1; wal --theme $HO
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit
-exec --no-startup-id pa-applet --disable-notifications
+#exec --no-startup-id pa-applet --disable-notifications
 #exec --no-startup-id conky -c /home/bee/.dotfiles/config/conky_gruvbox
 exec --no-startup-id xautolock -time 10 -locker  'betterlockscreen -l dimblur'
 exec_always --no-startup-id ff-theme-util
