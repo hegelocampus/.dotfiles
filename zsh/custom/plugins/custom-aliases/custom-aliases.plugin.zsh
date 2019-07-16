@@ -12,8 +12,13 @@ alias vi=nvim
 alias ou='ls -A'
 alias upp='sudo pacman -Syyu'
 alias cfound='cd ~/appaccademy/foundations'
+alias cfo='cfound'
 alias azp='zip -r ben_ellis_${PWD##*/} *'
 alias rubin='bundle install'
 alias rtest='bundle exec rspec'
 alias specdir='spdir.rb'
+alias feh='feh -.'
+alias addalias='nvim ~/.dotfiles/zsh/custom/plugins/custom-aliases/custom-aliases.plugin.zsh'
+alias adda='addalias'
+alias ccat='highlight -O truecolor --force'
 eval "$(hub alias -s)"
