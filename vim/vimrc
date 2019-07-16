@@ -19,7 +19,7 @@ filetype plugin on
 let g:pencil#wrapModeDefault = 'soft'
 
 " Theme config 
-colorscheme gruvbox
+colorscheme wal 
 set background=dark " Setting dark mode
 let g:airline_powerline_fonts = 1 
 " let g:airline_theme='distinguished'
@@ -54,6 +54,9 @@ set textwidth=79
 set expandtab
 set autoindent
 set fileformat=unix
+
+" Rainbow parentheses settup
+let g:rainbow_active = 1
 
 " WordProcessor setup
 func! WordProcessor()
