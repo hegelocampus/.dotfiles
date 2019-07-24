@@ -9,12 +9,15 @@ alias gsub='git submodule add'
 alias gstat='git status'
 alias vim=nvim
 alias vi=nvim
-alias ou='ls -A'
+alias ou='ls -A --group-directories-first'
+alias la='ou -l'
 alias upp='sudo pacman -Syyu'
 alias cfound='cd ~/appaccademy/foundations'
 alias azp='zip -r ben_ellis_${PWD##*/} *'
 alias rubin='bundle install'
 alias rtest='bundle exec rspec'
 alias specdir='spdir.rb'
-alias 'sudo rm -rf /'='sudo rm -r /'
+alias rm=' timeout 3 rm -Iv --one-file-system'
+alias mv='mv -i'
+alias clean='echo -ne "\033c" && (cat /home/bee/.cache/wal/sequences &)'
 eval "$(hub alias -s)"
