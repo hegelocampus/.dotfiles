@@ -30,6 +30,7 @@ hi Todo		guibg=none ctermbg=none
 hi Underlined	guibg=none ctermbg=none 
 hi ErrorMsg	guibg=none ctermbg=none 
 hi LineNr	guibg=none ctermbg=none 
+highlight ExtraWhitespace ctermbg=red
 
 " Set indent guides as default
 let g:indent_guides_enable_on_vim_startup = 1
@@ -40,6 +41,7 @@ let g:flake8_show_in_gutter=1
 " Set Utf-8 to default
 set encoding=utf-8
 
+set wrap
 set linebreak
 set autoindent
 set breakindent
