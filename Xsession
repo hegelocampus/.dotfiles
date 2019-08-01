@@ -11,6 +11,7 @@ export LC_TIME=en_US.UTF-8
 export AWT_TOOLKIT=XToolkit
 
 systemctl --user import-environment DISPLAY
+/home/bee/.screenlayout/dual_monitor_aux_left.sh &
 lxqt-policykit-agent
 MOZ_USE_XINPUT2=1
 dunst
