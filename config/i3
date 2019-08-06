@@ -180,6 +180,7 @@ for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 for_window [class="wine"] floating enable border normal
 for_window [title="wpgtk*"] floating enable border normal
+for_window [title="zoom"] floating enable border pixel 1
 for_window [class="Firefox"] border none
 
 # switch to workspace with urgent window automatically
@@ -282,6 +283,8 @@ bindsym $mod+n mode "restore"
 bindsym $mod+9 exec --no-startup-id betterlockscreen -l blur
 
 # Autostart applications
+exec --no-startup-id $HOME/.screenlayout/dual_monitor_aux_left.sh
+exec xset dpms 900 1200 0
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --blur-background # --backend glx --blur-method kawase --blur-strength 6
 exec --no-startup-id clipmenud
 exec --no-startup-id dunst
@@ -289,14 +292,12 @@ exec_always --no-startup-id $HOME/.dotfiles/polybar.sh; sleep 1; wal --theme $HO
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit
-#exec --no-startup-id pa-applet --disable-notifications
 #exec --no-startup-id conky -c /home/bee/.dotfiles/config/conky_gruvbox
-exec --no-startup-id xautolock -time 10 -locker  'betterlockscreen -l dimblur'
+exec --no-startup-id xautolock -time 5 -locker  'betterlockscreen -l dimblur'
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 # Autostart Geoclue2 for Redshift
-exec_always --no-startup-id /usr/lib/geoclue-2.0/demos/agent
-# Autostart Redshift
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift
 
 # Color palette used for the terminal ( ~/.Xresources file )

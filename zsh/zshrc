@@ -117,6 +117,11 @@ export VISUAL=nvim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#ls after cd'ing into new directory
+function chpwd() {
+  ou
+}
+
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.

@@ -164,7 +164,7 @@ double/triple
 #: Hide mouse cursor after the specified number of seconds of the
 #: mouse not being used. Set to zero to disable mouse cursor hiding.
 
-# focus_follows_mouse no
+focus_follows_mouse yes
 
 #: Set the active window to the window under the mouse when moving the
 #: mouse around
@@ -239,7 +239,7 @@ double/triple
 #: suffix of "c" on the width/height values to have them interpreted
 #: as number of cells instead of pixels.
 
-# enabled_layouts *
+enabled_layouts Tall, Grid
 
 #: The enabled window layouts. A comma separated list of layout names.
 #: The special value all means all layouts. The first listed layout
@@ -261,7 +261,7 @@ double/triple
 #: borders are displayed only when more than one window is visible.
 #: They are meant to separate multiple windows.
 
-# draw_minimal_borders yes
+draw_minimal_borders yes
 
 #: Draw only the minimum borders needed. This means that only the
 #: minimum needed borders for inactive windows are drawn. That is only
@@ -279,12 +279,12 @@ double/triple
 #: visible. Negative values will cause the value of
 #: window_margin_width to be used instead.
 
- window_padding_width 10.0
+ window_padding_width 12.0
 
 #: The window padding (in pts) (blank area between the text and the
 #: window border)
 
-# active_border_color #282828
+active_border_color #b77b59
 
 #: The color for the border of the active window
 
@@ -446,7 +446,7 @@ double/triple
 #: in your shell startup scripts but system-wide, otherwise kitty will
 #: not see it.
 
-# close_on_child_death no
+close_on_child_death no
 
 #: Close the window when the child process (shell) exits. If no (the
 #: default), the terminal will remain open when the child exits as
@@ -702,7 +702,8 @@ history buffer as
 
 #: Window management {{{
 
-# map kitty_mod+enter new_window
+map kitty_mod+enter new_window_with_cwd
+map kitty_mod+l next_layout
 
 #: You can open a new window running an arbitrary program, for
 #: example::
@@ -722,7 +723,7 @@ history buffer as
 #:     map ctrl+enter new_window @ some_program
 
 # map kitty_mod+n new_os_window
-# map kitty_mod+w close_window
+ map kitty_mod+w close_window
 # map kitty_mod+] next_window
 # map kitty_mod+[ previous_window
 # map kitty_mod+f move_window_forward
