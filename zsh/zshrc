@@ -131,3 +131,4 @@ function chpwd() {
 #source /home/bee/.cache/wal/colors-tty.sh
 
 eval "$(rbenv init -)"
+ttyctl -f
