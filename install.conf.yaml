@@ -1,8 +1,8 @@
 - clean: ['~']
 - defaults:
-        link:
-          create: true
-          force: true
+    link:
+      create: true
+      force: true
 - link:
     ~/.profile:
     ~/.bash_profile:
@@ -13,7 +13,7 @@
     ~/.Xmodmap:
     ~/.Xresources:
     ~/.xinitrc:
-    ~/.Xsession:
+    ~/.xprofile:
     ~/.zshrc: zsh/zshrc
     ~/.vimrc:
         path:  vim/vimrc
