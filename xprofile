@@ -1,4 +1,4 @@
-## ~/.xsession
+## ~/.xprofile
 # Enforce correct locales from the beginning:
 # LC_ALL is unset since it overwrites everything
 # LC_MESSAGES=C never translates program output
@@ -15,6 +15,6 @@ lxqt-policykit-agent
 MOZ_USE_XINPUT2=1
 dunst
 xset -b
-xset m 3/2 0
+xset m 3/2 2
 xset -dpms
 (cat /home/bee/.cache/wal/sequences &)

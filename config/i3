@@ -284,7 +284,7 @@ bindsym $mod+9 exec --no-startup-id betterlockscreen -l blur
 
 # Autostart applications
 exec --no-startup-id $HOME/.screenlayout/new_monitor_.sh
-exec xset dpms 900 1200 0
+exec xset dpms 900 0 0
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --blur-background # --backend glx --blur-method kawase --blur-strength 6
 exec --no-startup-id clipmenud
 exec --no-startup-id dunst
@@ -293,7 +293,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit
 #exec --no-startup-id conky -c /home/bee/.dotfiles/config/conky_gruvbox
-exec --no-startup-id xautolock -time 5 -locker  'betterlockscreen -l dimblur'
+exec --no-startup-id xautolock -time 30 -locker  'betterlockscreen -l dimblur'
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 # Autostart Geoclue2 for Redshift
