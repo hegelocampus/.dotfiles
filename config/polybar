@@ -37,7 +37,9 @@ color6 = ${xrdb:color172:#d79921}
 alert = ${xrdb:color1:#bd2c40}
 
 [bar/mybar]
-monitor = ${env:MONITOR:}
+;monitor = ${env:MONITOR:}
+monitor = DP-1
+
 width = 100%
 height = 20
 offset-x = 0
@@ -73,19 +75,52 @@ modules-right = filesystem xbacklight pulseaudio cpu memory wlan eth battery dat
 tray-position = right
 tray-padding = 1
 tray-detatched = false
-;tray-background = #0063ff
 tray-underline = ${colors.color8}
 
-;wm-restack = bspwm
 wm-restack = i3
 
 override-redirect = false
 
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
 ;scroll-up = i3wm-wsnext
 ;scroll-down = i3wm-wsprev
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/sidebar]
+monitor = DP-2
+width = 100%
+height = 20
+fixed-center = true
+
+background = ${colors.color0}
+foreground = ${colors.color7}
+
+line-size = 4
+line-color = ${colors.color7}
+
+border-size = 0
+border-color = #00000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 0
+
+font-0 = undefined medium:size=10;0
+font-1 = FuraCode Regular Nerd Font:pixelsize=10:antialias=false;1 
+font-2 = Siji:pixelsize=11:antialias=false;0
+font-3 = undefined medium:bold:size=10;0 
+
+modules-left = i3
+modules-center = xwindow
+;modules-right = filesystem xbacklight alsa cpu wlan eth battery date 
+modules-right = date 
+
+wm-restack = i3
+
+override-redirect = false
 
 cursor-click = pointer
 cursor-scroll = ns-resize

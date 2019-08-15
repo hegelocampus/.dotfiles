@@ -9,13 +9,15 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch Polybar, using default config location ~/.config/polybar/config
-if type "xrandr"; then
-  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-    MONITOR=$m polybar --reload --config=/home/bee/.dotfiles/config/polybar mybar &
-  done
-else
+#if type "xrandr"; then
+#  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+#    MONITOR=$m polybar --reload --config=/home/bee/.dotfiles/config/polybar mybar &
+#    polybar --config=/home/bee/.dotfiles/config/polybar sidebar &
+#  done
+#else
   polybar --reload --config=/home/bee/.dotfiles/config/polybar mybar &
-fi
+  polybar --reload --config=/home/bee/.dotfiles/config/polybar sidebar &
+#fi
 
 # Set color scheme using wal
 cat /home/bee/.cache/wal/sequences
