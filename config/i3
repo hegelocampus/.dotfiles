@@ -284,7 +284,7 @@ bindsym $mod+9 exec --no-startup-id betterlockscreen -l blur
 
 # Autostart applications
 exec --no-startup-id $HOME/.screenlayout/new_monitor_.sh
-exec xset dpms 900 0 0
+exec --no-startup-id xset dpms 900 0 0
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --blur-background # --backend glx --blur-method kawase --blur-strength 6
 exec --no-startup-id clipmenud
 exec --no-startup-id dunst
