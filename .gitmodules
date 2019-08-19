@@ -130,3 +130,6 @@
 [submodule "vim/bundle/vim-rhubarb"]
 	path = vim/bundle/vim-rhubarb
 	url = https://github.com/tpope/vim-rhubarb.git
+[submodule "config/polybar-spotify"]
+	path = config/polybar-spotify
+	url = https://github.com/Jvanrhijn/polybar-spotify

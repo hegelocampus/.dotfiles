@@ -70,7 +70,7 @@ font-3 = undefined medium:bold:size=10;0
 modules-left = i3
 modules-center = xwindow
 ;modules-right = filesystem xbacklight alsa cpu wlan eth battery date 
-modules-right = filesystem xbacklight pulseaudio cpu memory wlan eth battery date 
+modules-right = filesystem xbacklight pulseaudio spotify cpu memory wlan eth battery date
 
 tray-position = right
 tray-padding = 1
@@ -433,6 +433,14 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python /home/bee/.dotfiles/config/polybar-spotify/spotify_status.py -f '{song} - {artist}'
+format-underline = ${colors.secondary}
 
 [module/powermenu]
 type = custom/menu
