@@ -60,6 +60,7 @@
 [submodule "zsh/custom/plugins/send.zsh"]
 	path = zsh/custom/plugins/send.zsh
 	url = https://github.com/robertzk/send.zsh.git
+    ignore = dirty
 [submodule "vim/bundle/vim-notes"]
 	path = vim/bundle/vim-notes
 	url = https://github.com/xolox/vim-notes.git
@@ -96,6 +97,7 @@
 [submodule "zsh/custom/plugins/send"]
 	path = zsh/custom/plugins/send
 	url = https://github.com/robertzk/send.zsh
+    ignore = dirty
 [submodule "vim/bundle/indentpython.vim"]
 	path = vim/bundle/indentpython.vim
 	url = https://github.com/vim-scripts/indentpython.vim
