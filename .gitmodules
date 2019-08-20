@@ -135,3 +135,6 @@
 [submodule "config/polybar-spotify"]
 	path = config/polybar-spotify
 	url = https://github.com/Jvanrhijn/polybar-spotify
+[submodule "vim/bundle/sql-heredoc.vim"]
+	path = vim/bundle/sql-heredoc.vim
+	url = https://github.com/aliou/sql-heredoc.vim.git
