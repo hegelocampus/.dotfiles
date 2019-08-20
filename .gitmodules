@@ -138,3 +138,6 @@
 [submodule "vim/bundle/sql-heredoc.vim"]
 	path = vim/bundle/sql-heredoc.vim
 	url = https://github.com/aliou/sql-heredoc.vim.git
+[submodule "vim/bundle/vim-markdown"]
+	path = vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
