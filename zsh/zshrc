@@ -64,6 +64,7 @@ ZSH_CUSTOM=/home/bee/.dotfiles/zsh/custom
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   rbenv
+  rails
   nvm
   bundler
   git
@@ -76,13 +77,11 @@ plugins=(
   sudo
   z
   zsh-autosuggestions
-  taskwarrior
   custom-aliases
   fast-syntax-highlighting
   alias-tips
   send
   command-not-found
-  rails
 )
 
 source $ZSH/oh-my-zsh.sh

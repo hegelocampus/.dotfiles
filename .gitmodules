@@ -117,9 +117,6 @@
 [submodule "vim/bundle/vim-ruby-doc"]
 	path = vim/bundle/vim-ruby-doc
 	url = https://github.com/lucapette/vim-ruby-doc
-[submodule "vim/bundle/nerdtree"]
-	path = vim/bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim/bundle/rainbow"]
 	path = vim/bundle/rainbow
 	url = https://github.com/luochen1990/rainbow
