@@ -88,7 +88,8 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/sidebar]
-monitor = DP-2
+;monitor = DP-2
+monitor = HDMI-1
 width = 100%
 height = 20
 fixed-center = true
@@ -109,7 +110,6 @@ module-margin-left = 1
 module-margin-right = 0
 
 font-0 = undefined medium:size=10;0
-font-1 = FuraCode Regular Nerd Font:pixelsize=10:antialias=false;1 
 font-2 = Siji:pixelsize=11:antialias=false;0
 font-3 = undefined medium:bold:size=10;0 
 
@@ -225,12 +225,10 @@ output = eDP1
 
 format = <label> <bar>
 label = BL
-format-label-font= 1
 
 bar-width = 10
 bar-indicator = |
 bar-indicator-foreground = ${colors.foreground}
-bar-indicator-font = "FuraCode Nerd Font;2"
 bar-fill = ─
 bar-fill-font = 2
 bar-fill-foreground = ${colors.primary}
@@ -333,9 +331,9 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 2
+bar-volume-indicator-font = 3
 bar-volume-fill = ─
-bar-volume-fill-font = 2
+bar-volume-fill-font = 3
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
