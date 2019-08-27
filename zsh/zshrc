@@ -40,7 +40,7 @@ HYPHEN_INSENSITIVE="true"
 ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -126,10 +126,9 @@ function chpwd() {
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
 # ( ) # Hide shell job control messages.
-(cat /home/bee/.cache/wal/sequences &)
 
 # To add support for TTYs this line can be optionally added.
 #source /home/bee/.cache/wal/colors-tty.sh
 eval $(keychain --eval --quiet id_rsa) && clean
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 ttyctl -f

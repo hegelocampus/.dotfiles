@@ -133,7 +133,7 @@ set update_tmux_title false
 
 # Shorten the title if it gets long?  The number defines how many
 # directories are displayed at once, 0 turns off this feature.
-set shorten_title 3
+set shorten_title 4
 
 # Show hostname in titlebar?
 set hostname_in_titlebar false 
@@ -248,6 +248,7 @@ set global_inode_type_filter
 
 alias e     edit
 alias q     quit
+alias wq    quit
 alias q!    quit!
 alias qa    quitall
 alias qa!   quitall!

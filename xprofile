@@ -17,4 +17,5 @@ dunst
 xset -b
 xset m 3/2 2
 xset -dpms
+xset s off
 (cat /home/bee/.cache/wal/sequences &)
