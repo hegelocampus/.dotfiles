@@ -12,6 +12,10 @@ nnoremap <SPACE> <Nop>
 map <Space> <Leader>
 set showcmd
 
+""The bottom method is better but I'm leving the top one in as an example
+"map <leader>nt :call NerdTreeToggle()<CR>
+map <leader>nt :NERDTreeToggle<CR>
+
 set clipboard=unnamedplus
 
 " Setup for vim-notes
@@ -103,3 +107,7 @@ au BufNewFile,BufRead *.py
     \ setlocal autoindent
     \ setlocal fileformat=unix
     \ autocmd BufWritePost *.py call flake8#Flake8()
+
+function! NerdTreeToggle()
+  exe 'NERDTree'
+endfunction
