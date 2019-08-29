@@ -3,5 +3,8 @@
 	name = Bee
 [core]
 	excludesfile = ~/.cvsignore
+	excludesfile = node_modules/
+	excludesfile = */node_modules/
+	excludesfile = */*/node_modules/
 [color]
 	ui = true
