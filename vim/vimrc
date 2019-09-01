@@ -15,6 +15,7 @@ set showcmd
 ""The bottom method is better but I'm leving the top one in as an example
 "map <leader>nt :call NerdTreeToggle()<CR>
 map <leader>nt :NERDTreeToggle<CR>
+"map <leader>w :AutoPairsShortcutFastWrap<CR>
 
 set clipboard=unnamedplus
 
@@ -22,25 +23,28 @@ set clipboard=unnamedplus
 filetype plugin on
 let g:pencil#wrapModeDefault = 'soft'
 
-" Theme config 
-colorscheme wal 
+" Theme config
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=red
+colorscheme wal
 set background=dark " Setting dark mode
-let g:airline_powerline_fonts = 1 
+let g:airline_powerline_fonts = 1
 " let g:airline_theme='distinguished'
-hi Normal 	guibg=none ctermbg=none 
-hi Statement 	guibg=none ctermbg=none 
-hi Title	guibg=none ctermbg=none 
-hi Todo		guibg=none ctermbg=none 
-hi Underlined	guibg=none ctermbg=none 
-hi ErrorMsg	guibg=none ctermbg=none 
-hi LineNr	guibg=none ctermbg=none 
-highlight ExtraWhitespace ctermbg=red
+hi Normal 	guibg=none ctermbg=none
+hi Statement 	guibg=none ctermbg=none
+hi Title	guibg=none ctermbg=none
+hi Todo		guibg=none ctermbg=none
+hi Underlined	guibg=none ctermbg=none
+hi ErrorMsg	guibg=none ctermbg=none
+hi LineNr	guibg=none ctermbg=none
+
+" Define matching whitespace
+match ExtraWhitespace /\s\+$/
 
 " Set indent guides as default
 let g:indent_guides_enable_on_vim_startup = 1
 
 " Show flake8 in gutter
-let g:flake8_show_in_gutter=1 
+let g:flake8_show_in_gutter=1
 
 " Set Utf-8 to default
 set encoding=utf-8
@@ -50,7 +54,7 @@ set linebreak
 set autoindent
 set breakindent
 set number
-set numberwidth=1 
+set numberwidth=1
 set tabstop=4
 set softtabstop=0
 set shiftwidth=2
@@ -76,7 +80,7 @@ func! WordProcessor()
     setlocal formatoptions=1
     setlocal noexpandtab
     setlocal wrap
-    setlocal linebreak 
+    setlocal linebreak
     setlocal nonumber
     " spelling
     setlocal spell spelllang=en_us
