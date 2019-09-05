@@ -77,7 +77,6 @@ func! WordProcessor()
     map k gk
     " formatting text
     setlocal textwidth=0
-    setlocal formatoptions=1
     setlocal noexpandtab
     setlocal wrap
     setlocal linebreak

@@ -132,3 +132,4 @@ function chpwd() {
 eval $(keychain --eval --quiet id_rsa) && clean
 #eval "$(rbenv init -)"
 ttyctl -f
+function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}

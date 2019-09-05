@@ -38,3 +38,4 @@ alias githost='git config --local user.email pizzaman8099@gmail.com && git confi
 alias gitcheck='git config --local user.email && git config --local user.name' 
 alias gic='git init && git create && git add -A && git commit -m "Initial Commit" && git push --set-upstream origin master'
 alias rnew='rails new -G --database=postgresql'
+alias gir='gi rails > .gitignore'
