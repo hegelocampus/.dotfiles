@@ -269,17 +269,17 @@ draw_minimal_borders yes
 #: that setting a non-zero window margin overrides this and causes all
 #: borders to be drawn.
 
-# window_margin_width 10.0
+#window_margin_width 0.0
 
 #: The window margin (in pts) (blank area outside the border)
 
- single_window_margin_width 10.0
+ single_window_margin_width 5.0
 
 #: The window margin (in pts) to use when only a single window is
 #: visible. Negative values will cause the value of
 #: window_margin_width to be used instead.
 
- window_padding_width 12.0
+ window_padding_width 00.0
 
 #: The window padding (in pts) (blank area between the text and the
 #: window border)
@@ -288,7 +288,7 @@ active_border_color #b77b59
 
 #: The color for the border of the active window
 
-# inactive_border_color #cccccc
+inactive_border_color #7b8187
 
 #: The color for the border of inactive windows
 
@@ -348,7 +348,7 @@ active_border_color #b77b59
 #: Color scheme {{{
 
  foreground #ebdbb2
- background #282828
+ background #1b1d20
 
 #: The foreground and background colors
 
@@ -386,7 +386,7 @@ active_border_color #b77b59
 #: dull and bright version. You can also set the remaining colors from
 #: the 256 color table as color16 to color255.
 
- color0 #282828
+ color0 #1b1d20
  color8 #928374
 
 #: black
@@ -744,9 +744,9 @@ map kitty_mod+l start_resizing_window
 
 #: Tab management {{{
 
-# map kitty_mod+right next_tab
-# map kitty_mod+left  previous_tab
-# map kitty_mod+t     new_tab
+map kitty_mod+right next_tab
+map kitty_mod+left  previous_tab
+map kitty_mod+t     new_tab
 # map kitty_mod+q     close_tab
 # map kitty_mod+.     move_tab_forward
 # map kitty_mod+,     move_tab_backward
@@ -772,8 +772,8 @@ map kitty_mod+l start_resizing_window
 
 #: You can also create shortcuts to switch to specific layouts::
 
-#:     map ctrl+alt+t goto_layout tall
-#:     map ctrl+alt+s goto_layout stack
+map ctrl+alt+t goto_layout tall
+map ctrl+alt+s goto_layout stack
 
 #: Similarly, to switch back to the previous layout::
 

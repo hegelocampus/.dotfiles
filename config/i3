@@ -284,11 +284,12 @@ bindsym $mod+9 exec --no-startup-id betterlockscreen -l blur
 
 # Autostart applications
 exec --no-startup-id $HOME/.screenlayout/new_monitor_.sh
-exec --no-startup-id xset dpms 900 0 0
+exec --no-startup-id xset dpms 0 0 0
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --blur-background # --backend glx --blur-method kawase --blur-strength 6
 exec --no-startup-id clipmenud
 exec --no-startup-id dunst
-exec_always --no-startup-id $HOME/.dotfiles/polybar.sh; sleep 1; wal --theme $HOME/.dotfiles/colors.json # This will start polybar and then set the colorscheme for the entire desktop environment
+# This will start polybar and then set the colorscheme for the entire desktop environment
+exec_always --no-startup-id $HOME/.dotfiles/polybar.sh; sleep 1; wal --theme $HOME/.dotfiles/colors.json 
 exec --no-startup-id nm-applet
 exec --no-startup-id xfce4-power-manager
 exec --no-startup-id clipit

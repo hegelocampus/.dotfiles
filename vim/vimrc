@@ -19,9 +19,6 @@ map <leader>nt :NERDTreeToggle<CR>
 
 set clipboard=unnamedplus
 
-" Setup for vim-notes
-filetype plugin on
-let g:pencil#wrapModeDefault = 'soft'
 
 " Theme config
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=red
@@ -64,9 +61,6 @@ set autoindent
 set fileformat=unix
 set conceallevel=2
 
-" Rainbow parentheses settup
-let g:rainbow_active = 1
-
 " WordProcessor setup
 func! WordProcessor()
     colorscheme wal
@@ -88,6 +82,8 @@ func! WordProcessor()
 endfu
 com! WP call WordProcessor()
 
+"" Pluggin Configuration
+
 " Settings for Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -98,8 +94,17 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let python_highlight_all=1
+
 let g:vim_markdown_folding_disabled = 1
 
+" Rainbow parentheses settup
+let g:rainbow_active = 1
+
+let g:airline#extensions#tabline#enabled = 1
+
+" Setup for vim-notes
+filetype plugin on
+let g:pencil#wrapModeDefault = 'soft'
 
 au BufNewFile,BufRead *.py
     \ setlocal tabstop=4
