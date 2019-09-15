@@ -7,7 +7,7 @@
 #: characters.
 
  font_family      Fira Code
- bold_font        auto
+ bold_font        Fira Code Bold
  italic_font      auto
  bold_italic_font auto
 
@@ -24,7 +24,7 @@
 
 
 #: Font size (in pts)
-font_size 11.5
+font_size 12
 
 # adjust_line_height  0
 # adjust_column_width 0
@@ -48,7 +48,7 @@ font_size 11.5
 
 #:     symbol_map codepoints Font Family Name
 
-disable_ligatures never
+disable_ligatures cursor
 
 # box_drawing_scale 0.001, 1, 1.5, 2
 
@@ -155,8 +155,7 @@ disable_ligatures never
 
 # click_interval 0.5
 
-#: The interval between successive clicks to detect 
-double/triple
+#: The interval between successive clicks to detect double/triple
 #: clicks (in seconds)
 
 # mouse_hide_wait 3.0
@@ -675,8 +674,7 @@ close_on_child_death no
 # map kitty_mod+end       scroll_end
 # map kitty_mod+h         show_scrollback
 
-#: You can pipe the contents of the current screen + 
-history buffer as
+#: You can pipe the contents of the current screen + history buffer as
 #: STDIN to an arbitrary program using the ``pipe`` function. For
 #: example, the following opens the scrollback buffer in less in an
 #: overlay window::
