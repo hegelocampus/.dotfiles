@@ -38,7 +38,7 @@ alert = ${xrdb:color1:#bd2c40}
 
 [bar/mybar]
 ;monitor = ${env:MONITOR:}
-monitor = DP-1
+monitor = DisplayPort-0
 
 width = 100%
 height = 20
@@ -89,7 +89,7 @@ cursor-scroll = ns-resize
 
 [bar/sidebar]
 ;monitor = DP-2
-monitor = HDMI-1
+monitor = HDMI-A-0
 width = 100%
 height = 20
 fixed-center = true
@@ -313,13 +313,14 @@ label = %date%%{F#ebdbb2}%time%
 [module/alsa]
 type = internal/alsa
 
-format-volume = %{T3} %{T-}<bar-volume>
+;format-volume = %{T3} %{T-}<bar-volume>
+format-volume = %{T3} %{T2}<bar-volume>
 label-volume ="" 
 label-volume-foreground = ${colors.foreground-alt}
 
 ;format-muted-prefix = %{T3}" " 
 format-muted-foreground = ${colors.foreground-alt}
-label-muted = %{T3} %{T-}sound muted
+label-muted = %{T3} %{T2}sound muted
 
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
@@ -331,9 +332,11 @@ bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
 bar-volume-gradient = false
 bar-volume-indicator = |
-bar-volume-indicator-font = 3
-bar-volume-fill = ─
-bar-volume-fill-font = 3
+bar-volume-indicator-font = 2
+bar-volume-fill = 
+;bar-volume-fill = 
+;bar-volume-fill = 籠
+bar-volume-fill-font = 2
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
@@ -374,8 +377,9 @@ bar-volume-foreground-6 = ${colors.alert}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
+;bar-volume-fill = ─
+bar-volume-fill = 
+bar-volume-fill-font = 3
 bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}

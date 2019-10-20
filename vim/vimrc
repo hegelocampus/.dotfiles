@@ -19,6 +19,16 @@ map <leader>nt :NERDTreeToggle<CR>
 
 set clipboard=unnamedplus
 
+" Remap tab keys to perform buffer actions
+nmap <leader>t :enew<cr>
+" Move to the next buffer
+nmap gt :bnext<CR>
+" Move to the previous buffer
+nmap gT :bprevious<CR>
+" Close the current buffer and move to the previous one
+nmap <leader>bq :bp <BAR> bd #<CR>
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
 
 " Theme config
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=red
@@ -60,6 +70,8 @@ set expandtab
 set autoindent
 set fileformat=unix
 set conceallevel=2
+set splitbelow
+set splitright
 
 " WordProcessor setup
 func! WordProcessor()
@@ -97,6 +109,10 @@ let python_highlight_all=1
 
 let g:vim_markdown_folding_disabled = 1
 
+let g:vim_jsx_pretty_colorful_config = 1
+
+let g:user_emmet_leader_key='<leader>h'
+
 " Rainbow parentheses settup
 let g:rainbow_active = 1
 
@@ -105,6 +121,8 @@ let g:airline#extensions#tabline#enabled = 1
 " Setup for vim-notes
 filetype plugin on
 let g:pencil#wrapModeDefault = 'soft'
+
+autocmd BufNewFile,BufRead *.jbuilder set syntax=ruby
 
 au BufNewFile,BufRead *.py
     \ setlocal tabstop=4
