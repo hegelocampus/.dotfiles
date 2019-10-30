@@ -4,6 +4,8 @@ export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/bin:$PATH
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.dotfiles/zsh/oh-my-zsh"
 
+export SASS_PATH=./node_modules
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -67,6 +69,7 @@ plugins=(
   rails
   nvm
   bundler
+  docker
   git
   gitfast
   git-extras
@@ -74,7 +77,6 @@ plugins=(
   common-aliases
   compleat
   colored-man-pages
-  sudo
   z
   zsh-autosuggestions
   custom-aliases

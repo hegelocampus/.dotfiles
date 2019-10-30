@@ -8,3 +8,7 @@
 	excludesfile = */*/node_modules/
 [color]
 	ui = true
+[rerere]
+	enabled = 1
+[push]
+	default = current
