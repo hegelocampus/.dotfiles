@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/bin:$HOME/.pub-cache/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.dotfiles/zsh/oh-my-zsh"
@@ -69,7 +69,6 @@ plugins=(
   rails
   nvm
   bundler
-  docker
   git
   gitfast
   git-extras
@@ -78,12 +77,14 @@ plugins=(
   compleat
   colored-man-pages
   z
+  docker
+  docker-compose
+  send
+  command-not-found
   zsh-autosuggestions
   custom-aliases
   fast-syntax-highlighting
   alias-tips
-  send
-  command-not-found
 )
 
 source $ZSH/oh-my-zsh.sh

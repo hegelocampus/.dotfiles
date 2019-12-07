@@ -10,7 +10,33 @@ set hidden
 " Map lead key to space
 nnoremap <SPACE> <Nop>
 map <Space> <Leader>
+
+" General settings
+set fileformat=unix
+set encoding=utf-8
+set autoread
 set showcmd
+set relativenumber
+set wrap
+set linebreak
+set autoindent
+set breakindent
+set number
+set numberwidth=1
+set tabstop=4
+set softtabstop=0
+set shiftwidth=2
+set textwidth=79
+set expandtab
+set autoindent
+set conceallevel=2
+set splitbelow
+set splitright
+
+" Settings for Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 ""The bottom method is better but I'm leving the top one in as an example
 "map <leader>nt :call NerdTreeToggle()<CR>
@@ -33,7 +59,7 @@ nmap <leader>bl :ls<CR>
 " Theme config
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=darkred guibg=red
 colorscheme wal
-set background=dark " Setting dark mode
+set background=dark
 let g:airline_powerline_fonts = 1
 " let g:airline_theme='distinguished'
 hi Normal 	guibg=none ctermbg=none
@@ -49,29 +75,11 @@ match ExtraWhitespace /\s\+$/
 
 " Set indent guides as default
 let g:indent_guides_enable_on_vim_startup = 1
+let dart_style_guide = 2
+let dart_format_on_save = 0
 
 " Show flake8 in gutter
 let g:flake8_show_in_gutter=1
-
-" Set Utf-8 to default
-set encoding=utf-8
-
-set wrap
-set linebreak
-set autoindent
-set breakindent
-set number
-set numberwidth=1
-set tabstop=4
-set softtabstop=0
-set shiftwidth=2
-set textwidth=79
-set expandtab
-set autoindent
-set fileformat=unix
-set conceallevel=2
-set splitbelow
-set splitright
 
 " WordProcessor setup
 func! WordProcessor()
@@ -95,11 +103,6 @@ endfu
 com! WP call WordProcessor()
 
 "" Pluggin Configuration
-
-" Settings for Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -137,3 +140,4 @@ au BufNewFile,BufRead *.py
 function! NerdTreeToggle()
   exe 'NERDTree'
 endfunction
+
