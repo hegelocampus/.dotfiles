@@ -51,4 +51,5 @@ alias hcp='heroku container:push'
 alias gsta='gstat'
 alias gpr='git push -u && git pull-request'
 alias google-chrome='google-chrome-stable'
+alias os='obliquestrategies'
 
