@@ -19,3 +19,4 @@ xset m 3/2 2
 xset -dpms
 xset s 3600 3600
 (cat /home/bee/.cache/wal/sequences &)
+
