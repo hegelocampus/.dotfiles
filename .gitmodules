@@ -165,3 +165,6 @@
 [submodule "vim/bundle/vim-polyglot"]
 	path = vim/bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
+[submodule "vim/bundle/vim-flow"]
+	path = vim/bundle/vim-flow
+	url = git://github.com/flowtype/vim-flow.git
