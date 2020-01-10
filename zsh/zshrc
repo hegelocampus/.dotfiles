@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/bin:$HOME/.pub-cache/bin:$PATH
+export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/bin:$HOME/.local/bin:$HOME/.pub-cache/bin:$PATH
+
 export PATH="$(yarn global bin):$PATH"
 
 # Path to your oh-my-zsh installation.
@@ -122,10 +123,13 @@ export VISUAL=nvim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-#ls after cd'ing into new directory
+# ls after cd'ing into new directory
 function chpwd() {
   ou
 }
+
+# Add git ignore generator fuction
+function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
@@ -136,4 +140,5 @@ function chpwd() {
 eval $(keychain --eval --quiet id_rsa) && clean
 #eval "$(rbenv init -)"
 ttyctl -f
-function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
+
+
