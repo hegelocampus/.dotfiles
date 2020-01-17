@@ -125,7 +125,9 @@ let g:airline#extensions#tabline#enabled = 1
 filetype plugin on
 let g:pencil#wrapModeDefault = 'soft'
 
-autocmd BufNewFile,BufRead *.jbuilder set syntax=ruby
+autocmd BufNewFile,BufRead *.jbuilder setlocal syntax=ruby
+autocmd BufRead,BufNewFile *.md call WordProcessor()
+autocmd FileType gitcommit call WordProcessor()
 
 au BufNewFile,BufRead *.py
     \ setlocal tabstop=4
