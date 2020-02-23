@@ -29,7 +29,6 @@ alias ccat='highlight -O truecolor --force'
 eval "$(hub alias -s)"
 alias pgsql='sudo -iu postgres'
 alias pacup='sudo pacman -Syyu'
-alias cru='cd ~/appaccademy/ruby'
 alias fx='stty sane'
 alias topup='topgrade'
 alias ccp='cp -r'
@@ -52,4 +51,5 @@ alias gsta='gstat'
 alias gpr='git push -u && git pull-request'
 alias google-chrome='google-chrome-stable'
 alias os='obliquestrategies'
+alias fnd='fd'
 

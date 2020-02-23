@@ -168,3 +168,6 @@
 [submodule "vim/bundle/vim-flow"]
 	path = vim/bundle/vim-flow
 	url = git://github.com/flowtype/vim-flow.git
+[submodule "zsh/zsh/custom/themes/powerlevel10k"]
+	path = zsh/zsh/custom/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k
