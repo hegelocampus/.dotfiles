@@ -1,0 +1,27 @@
+# $HOME/.zshenv
+
+appendpath () {
+  case ":$PATH:" in
+    *:"$1":*)
+      ;;
+    *)
+      PATH="${PATH:+$PATH:}$1"
+  esac
+}
+
+appendpath '$HOME/.rbenv/bin'
+appendpath '$HOME/.rbenv/bin'
+appendpath '$HOME/bin'
+appendpath '/usr/bin'
+appendpath '$HOME/.local/bin'
+appendpath '$HOME/.pub-cache/bin'
+unset appendpath
+
+export PATH
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export SASS_PATH=./node_modules
+
+export ZSH="$HOME/.dotfiles/zsh/oh-my-zsh"
+

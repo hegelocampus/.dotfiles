@@ -15,6 +15,7 @@
     ~/.xinitrc:
     ~/.xprofile:
     ~/.zshrc: zsh/zshrc
+    ~/.zshenv: zsh/zshenv
     ~/.vimrc:
         path:  vim/vimrc
     ~/.taskrc: config/taskrc
