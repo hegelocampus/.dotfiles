@@ -81,7 +81,6 @@ let dart_format_on_save = 0
 " Show flake8 in gutter
 let g:flake8_show_in_gutter=1
 
-" WordProcessor setup
 func! WordProcessor()
     colorscheme wal
     " movement changes
@@ -102,6 +101,13 @@ func! WordProcessor()
 endfu
 com! WP call WordProcessor()
 
+func! FourSpaceTab()
+    setlocal tabstop=8
+    setlocal shiftwidth=4
+    setlocal softtabstop=0
+    setlocal expandtab
+    setlocal smarttab
+endfu
 "" Pluggin Configuration
 
 let g:syntastic_always_populate_loc_list = 1
@@ -127,6 +133,8 @@ let g:pencil#wrapModeDefault = 'soft'
 
 autocmd BufNewFile,BufRead *.jbuilder setlocal syntax=ruby
 autocmd BufRead,BufNewFile *.md call WordProcessor()
+autocmd BufRead,BufNewFile *.hs call FourSpaceTab()
+autocmd BufRead,BufNewFile *.py call FourSpaceTab()
 autocmd FileType gitcommit call WordProcessor()
 
 function! NerdTreeToggle()
