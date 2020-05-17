@@ -52,4 +52,5 @@ alias gpr='git push -u && git pull-request'
 alias google-chrome='google-chrome-stable'
 alias os='obliquestrategies'
 alias fnd='fd'
+alias nettop='iftop'
 
