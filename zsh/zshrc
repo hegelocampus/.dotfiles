@@ -67,9 +67,12 @@ ZSH_CUSTOM=/home/bee/.dotfiles/zsh/custom
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  rbenv
-  rails
+  ## rbenv
+  ## rails
   ## nvm
+  ## pip
+  ## virtualenvwrapper
+  ## django
   nvm-load
   bundler
   git
@@ -82,9 +85,6 @@ plugins=(
   z
   docker
   docker-compose
-  django
-  pip
-  ## virtualenvwrapper
   send
   zsh-autosuggestions
   fast-syntax-highlighting
