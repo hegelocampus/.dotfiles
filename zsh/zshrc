@@ -70,9 +70,9 @@ plugins=(
   ## rbenv
   ## rails
   ## nvm
-  ## pip
-  ## virtualenvwrapper
-  ## django
+  pip
+  virtualenvwrapper
+  django
   nvm-load
   bundler
   git
