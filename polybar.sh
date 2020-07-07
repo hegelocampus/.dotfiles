@@ -10,11 +10,11 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 if type "xrandr"; then
   polybar -m | while read m; do
     export MONITOR=$(echo $m | cut -d":" -f1)
-    if echo $m | grep -q "primary"; then
-      echo "Launching mainbar on monitor: $MONITOR"
+    if [[ $m =~ primary ]]; then
+      echo "Launching mainbar on monitor: $MONITOR..." &&
       polybar --reload --config=/home/bee/.dotfiles/config/polybar mainbar &
     else
-      echo "Launching sidebar on monitor: $MONITOR"
+      echo "Launching sidebar on monitor: $MONITOR..." &&
       polybar --reload --config=/home/bee/.dotfiles/config/polybar sidebar &
     fi
   done
