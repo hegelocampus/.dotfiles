@@ -6,16 +6,18 @@ killall -q polybar
 # Wait until the processes have been shut down
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
-# Launch Polybar, using default config location ~/.config/polybar/config
+PBAR_CONFIG=~/.dotfiles/config/polybar
+
+# Launch Polybar instance for each monitor
 if type "xrandr"; then
   polybar -m | while read m; do
     export MONITOR=$(echo $m | cut -d":" -f1)
     if [[ $m =~ primary ]]; then
       echo "Launching mainbar on monitor: $MONITOR..." &&
-      polybar --reload --config=/home/bee/.dotfiles/config/polybar mainbar &
+      polybar --reload --config=$PBAR_CONFIG mainbar &
     else
       echo "Launching sidebar on monitor: $MONITOR..." &&
-      polybar --reload --config=/home/bee/.dotfiles/config/polybar sidebar &
+      polybar --reload --config=$PBAR_CONFIG sidebar &
     fi
   done
 else
