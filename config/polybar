@@ -26,19 +26,19 @@ primary = ${xrdb:color4:#ffb52a}
 ;Aqua
 secondary = ${xrdb:color6:#e60053}
 ;Green
-tertiary = ${xrdb:color2:#98971a} 
+tertiary = ${xrdb:color2:#98971a}
 ;Purple
 color5 = ${xrdb:color5:#b16286}
 ;Orange
-color16 = ${xrdb:color166:#bd8667}  
+color16 = ${xrdb:color166:#bd8667}
 ;Yellow
-color6 = ${xrdb:color172:#d79921}  
+color6 = ${xrdb:color172:#d79921}
 ;Red
 alert = ${xrdb:color1:#bd2c40}
 
-[bar/mybar]
-;monitor = ${env:MONITOR:}
-monitor = DisplayPort-0
+[bar/mainbar]
+monitor = ${env:MONITOR:}
+;monitor = DisplayPort-0
 
 width = 100%
 height = 20
@@ -89,7 +89,8 @@ cursor-scroll = ns-resize
 
 [bar/sidebar]
 ;monitor = DP-2
-monitor = HDMI-A-0
+;monitor = HDMI-A-0
+monitor = ${env:MONITOR:}
 width = 100%
 height = 20
 fixed-center = true
