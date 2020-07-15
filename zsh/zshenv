@@ -15,6 +15,7 @@ appendpath "$HOME/bin"
 appendpath "/usr/bin"
 appendpath "$HOME/.local/bin"
 appendpath "$HOME/.pub-cache/bin"
+appendpath "$HOME/.cargo/bin"
 unset appendpath
 
 export PATH
