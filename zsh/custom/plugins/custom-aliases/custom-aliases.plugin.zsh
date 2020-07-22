@@ -53,5 +53,5 @@ alias google-chrome='google-chrome-stable'
 alias os='obliquestrategies'
 alias fnd='fd'
 alias nettop='iftop'
-alias import='echo "You probably want source -- not import -- import takes a screenshot and will overwrite the file you pass in by default"'
+alias import='echo -e "You probably want source -- not import -- import takes a screenshot and will overwrite the file you pass in by default and I imagine the following file is important to you: "'
 
