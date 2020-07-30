@@ -1,3 +1,6 @@
+source /home/bee/.cache/wal/colors-tty.sh
+(cat /home/bee/.cache/wal/sequences)
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -61,6 +64,7 @@ COMPLETION_WAITING_DOTS="true"
 
 # Would you like to use another custom folder than $ZSH/custom?
 ZSH_CUSTOM=/home/bee/.dotfiles/zsh/custom
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -88,12 +92,13 @@ plugins=(
   send
   zsh-autosuggestions
   fast-syntax-highlighting
-  custom-aliases
   alias-tips
   compleat
+  custom-aliases
 )
 
 source $ZSH/oh-my-zsh.sh
+eval $(keychain --eval --quiet id_rsa)
 
 # User configuration
 
@@ -103,29 +108,17 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='nvim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='vim'
+fi
 
 export EDITOR=nvim
 export VISUAL=nvim
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # ls after cd'ing into new directory
 function chpwd() {
@@ -140,8 +133,6 @@ function gi() { curl -sLw n https://www.gitignore.io/api/$@ ;}
 # ( ) # Hide shell job control messages.
 
 # To add support for TTYs this line can be optionally added.
-#source /home/bee/.cache/wal/colors-tty.sh
-eval $(keychain --eval --quiet id_rsa) && clean
 #eval "$(rbenv init -)"
 ttyctl -f
 
