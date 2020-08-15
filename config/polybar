@@ -70,7 +70,7 @@ font-3 = undefined medium:bold:size=10;0
 modules-left = i3
 modules-center = xwindow
 ;modules-right = filesystem xbacklight alsa cpu wlan eth battery date 
-modules-right = filesystem xbacklight pulseaudio cpu memory wlan eth battery date
+modules-right = polymonitor filesystem xbacklight pulseaudio cpu memory wlan eth battery date
 
 tray-position = right
 tray-padding = 1
@@ -112,12 +112,12 @@ module-margin-right = 0
 
 font-0 = undefined medium:size=10;0
 font-2 = Siji:pixelsize=11:antialias=false;0
-font-3 = undefined medium:bold:size=10;0 
+font-3 = undefined medium:bold:size=10;0
 
 modules-left = i3
-modules-center = spotify 
-;modules-right = filesystem xbacklight alsa cpu wlan eth battery date 
-modules-right = date 
+modules-center = spotify
+;modules-right = filesystem xbacklight alsa cpu wlan eth battery date
+modules-right = date
 
 wm-restack = i3
 
@@ -125,6 +125,11 @@ override-redirect = false
 
 cursor-click = pointer
 cursor-scroll = ns-resize
+
+[module/polymonitor]
+type = custom/script
+exec = ~/appaccademy/personal_projects/polymonitor/polymonitor/cli.py -cu bellis.dev https://roastia.herokuapp.com/ https://dartsynth.firebaseapp.com/ https://wikiartclone.herokuapp.com/#/134
+interval = 20800
 
 [module/xwindow]
 type = internal/xwindow
