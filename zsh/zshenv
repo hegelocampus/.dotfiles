@@ -26,3 +26,4 @@ export SASS_PATH=./node_modules
 
 export ZSH="$HOME/.dotfiles/zsh/oh-my-zsh"
 
+if [ -e /home/bee/.nix-profile/etc/profile.d/nix.sh ]; then . /home/bee/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
