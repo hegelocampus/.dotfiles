@@ -62,18 +62,18 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 0
 
-font-0 = undefined medium:size=10;0
-font-1 = FuraCode Regular Nerd Font:pixelsize=10:antialias=false;1 
+font-0 = undefined medium:size=10.1;0
+font-1 = FuraCode Regular Nerd Font:pixelsize=10:antialias=false;0
 font-2 = Siji:pixelsize=11:antialias=false;0
-font-3 = undefined medium:bold:size=10;0 
+font-3 = undefined medium:bold:size=10;0
 
 modules-left = i3
 modules-center = xwindow
-;modules-right = filesystem xbacklight alsa cpu wlan eth battery date 
+;modules-right = filesystem xbacklight alsa cpu wlan eth battery date
 modules-right = polymonitor filesystem xbacklight pulseaudio cpu memory wlan eth battery date
 
 tray-position = right
-tray-padding = 1
+tray-padding = 2
 tray-detatched = false
 tray-underline = ${colors.color8}
 
@@ -110,7 +110,7 @@ padding-right = 0
 module-margin-left = 1
 module-margin-right = 0
 
-font-0 = undefined medium:size=10;0
+font-0 = undefined medium:size=10.5;0
 font-2 = Siji:pixelsize=11:antialias=false;0
 font-3 = undefined medium:bold:size=10;0
 
@@ -207,7 +207,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 ; Separator in between workspaces
 label-separator = |
 ;label-separator-padding = 1
-label-separator-foreground = ${colors.color8} 
+label-separator-foreground = ${colors.color8}
 label-separator-underline = ${colors.color8}
 
 
@@ -226,7 +226,7 @@ label-song-ellipsis = true
 
 [module/xbacklight]
 type = internal/xbacklight
-output = eDP1 
+output = eDP1
 
 
 format = <label> <bar>
@@ -251,6 +251,7 @@ card = intel_backlight
 type = internal/cpu
 interval = 2
 format-prefix = ""
+format-prefix-font = 2
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = ${colors.secondary}
 label = %percentage:2%%
@@ -260,6 +261,7 @@ type = internal/memory
 interval = 2
 format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
+format-prefix-font = 3
 format-underline = ${colors.color6}
 label = %percentage_used%%
 
