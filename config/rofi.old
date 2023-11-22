@@ -1,0 +1,6 @@
+rofi.theme: ~/.dotfiles/misc/rofi-theme.rasi
+rofi.modi: window,run,drun,ssh,combi
+rofi.combi-modi: window,drun
+rofi.bw: 0
+rofi.:width: 15
+rofi.font: undefined 10

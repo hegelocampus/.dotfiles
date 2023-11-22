@@ -56,7 +56,7 @@ alias fnd='fd'
 alias nettop='iftop'
 alias import='echo -e "You probably want source -- not import -- import takes a screenshot and will overwrite the file you pass in by default and I imagine the following file is important to you: "'
 function hg() {
-  echo "You aren't at work... use can use git...";
+  echo "You don't work at Facebook anymore... use can use git...";
   local res=$(git $@);
   echo $res
 }
