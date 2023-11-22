@@ -76,7 +76,7 @@ plugins=(
   # nvm
   pip
   virtualenvwrapper
-  django
+  # django
   nvm-load
   bundler
   git
@@ -91,7 +91,7 @@ plugins=(
   docker-compose
   send
   zsh-autosuggestions
-  fast-syntax-highlighting
+  F-Sy-H
   alias-tips
   compleat
   custom-aliases

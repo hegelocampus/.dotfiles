@@ -40,13 +40,13 @@ set statusline+=%*
 
 ""The bottom method is better but I'm leving the top one in as an example
 "map <leader>nt :call NerdTreeToggle()<CR>
-map <leader>nt :NERDTreeToggle<CR>
+map <leader>ntr :NERDTreeToggle<CR>
 "map <leader>w :AutoPairsShortcutFastWrap<CR>
 
 set clipboard=unnamedplus
 
 " Remap tab keys to perform buffer actions
-nmap <leader>t :enew<cr>
+nmap <leader>nt :enew<cr>
 " Move to the next buffer
 nmap gt :bnext<CR>
 " Move to the previous buffer

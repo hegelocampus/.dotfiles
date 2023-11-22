@@ -171,3 +171,6 @@
 [submodule "zsh/custom/themes/powerlevel10k"]
 	path = zsh/custom/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k
+[submodule "zsh/custom/plugins/F-Sy-H"]
+	path = zsh/custom/plugins/F-Sy-H
+	url = https://github.com/z-shell/F-Sy-H.git

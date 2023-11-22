@@ -1,6 +1,6 @@
-alias :q=exit
-alias :qw=:q
-alias :wq=:q
+alias :q='exit 0'
+alias :qw=':q'
+alias :wq=':q'
 alias cdot='cd ~/.dotfiles/'
 alias cdoc='cd ~/Documents/'
 alias cdrive='cd ~/gdrive/'
@@ -55,4 +55,9 @@ alias os='obliquestrategies'
 alias fnd='fd'
 alias nettop='iftop'
 alias import='echo -e "You probably want source -- not import -- import takes a screenshot and will overwrite the file you pass in by default and I imagine the following file is important to you: "'
+function hg() {
+  echo "You aren't at work... use can use git...";
+  local res=$(git $@);
+  echo $res
+}
 

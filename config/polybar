@@ -128,7 +128,7 @@ cursor-scroll = ns-resize
 
 [module/polymonitor]
 type = custom/script
-exec = ~/appaccademy/personal_projects/polymonitor/polymonitor/cli.py -cu bellis.dev https://roastia.herokuapp.com/ https://dartsynth.firebaseapp.com/ https://wikiartclone.herokuapp.com/#/134
+exec = polymonitor -c bellis.dev https://dartsynth.firebaseapp.com/
 interval = 20800
 
 [module/xwindow]

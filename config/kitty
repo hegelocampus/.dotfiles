@@ -305,11 +305,11 @@ inactive_border_color #7b8187
 
 #: Tab bar {{{
 
-# tab_bar_edge bottom
+tab_bar_edge bottom
 
 #: Which edge to show the tab bar on, top or bottom
 
-# tab_bar_margin_width 0.0
+tab_bar_margin_width 10.0
 
 #: The margin to the left and right of the tab bar (in pts)
 
@@ -463,7 +463,7 @@ close_on_child_death no
 #: content of windows, etc. Note that this even works over ssh
 #: connections.
 
-# env 
+# env
 
 #: Specify environment variables to set in all child processes. Note
 #: that environment variables are expanded recursively, so if you

@@ -1,6 +1,7 @@
 [user]
-	email = pizzaman8099@gmail.com
+	email = benellis8099@gmail.com
 	name = Bee
+	signingkey = 86D94A55E7F60C2B
 [core]
 	excludesfile = ~/.cvsignore
 	excludesfile = node_modules/
@@ -14,3 +15,5 @@
 	default = current
 [pull]
 	rebase = true
+[commit]
+	gpgsign = true
