@@ -29,3 +29,8 @@
     ~/.config/dunst/dunstrc: config/dunstrc
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
+  - command: sudo ln -sfn "$(pwd)/etc/greetd/config.toml" /etc/greetd/config.toml
+    description: Linking greetd config (requires sudo)
+    stdin: true
+    stdout: true
+    stderr: true
