@@ -1,0 +1,9 @@
+[display]
+show_time = true
+
+[remember]
+username = true
+session = true
+
+[session]
+xsessions_dirs = ["/usr/share/xsessions"]

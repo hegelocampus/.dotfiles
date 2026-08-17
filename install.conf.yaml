@@ -37,3 +37,10 @@
     stdin: true
     stdout: true
     stderr: true
+  # Copied rather than linked: tuigreet runs as the unprivileged `greeter` user,
+  # which cannot traverse $HOME to follow a symlink into this repo.
+  - command: sudo install -Dm644 "$(pwd)/etc/tuigreet/config.toml" /etc/tuigreet/config.toml
+    description: Installing tuigreet config (requires sudo)
+    stdin: true
+    stdout: true
+    stderr: true
