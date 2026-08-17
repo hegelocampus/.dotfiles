@@ -27,6 +27,9 @@
     ~/.config/rofi/config: config/rofi
     ~/.config/compton.conf: config/compton-blur
     ~/.config/dunst/dunstrc: config/dunstrc
+    ~/.claude/CLAUDE.md: claude/CLAUDE.md
+    ~/.claude/settings.json: claude/settings.json
+    ~/.claude/askpass.sh: claude/askpass.sh
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
   - command: sudo ln -sfn "$(pwd)/etc/greetd/config.toml" /etc/greetd/config.toml

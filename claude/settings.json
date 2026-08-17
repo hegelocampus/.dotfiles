@@ -1,0 +1,12 @@
+{
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "env": {
+    "SUDO_ASKPASS": "/home/beetle/.claude/askpass.sh"
+  },
+  "model": "opus[1m]",
+  "theme": "dark",
+  "verbose": true
+}
