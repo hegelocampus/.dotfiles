@@ -279,7 +279,7 @@ bindsym $mod+n mode "restore"
 bindsym $mod+9 exec --no-startup-id betterlockscreen -l blur
 
 # Autostart applications
-exec --no-startup-id $HOME/.screenlayout/new_dual_monitor.sh
+exec --no-startup-id $HOME/.screenlayout/current.sh
 exec --no-startup-id xset dpms 0 0 0
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b --blur-background # --backend glx --blur-method kawase --blur-strength 6
 exec --no-startup-id clipmenud
